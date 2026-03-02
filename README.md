@@ -2,7 +2,146 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-02-23**
+Auto-updated weekly. Last update: **2026-03-02**
+
+---
+
+## 2026-W09
+
+### [From Static Benchmarks to Dynamic Protocol: Agent-Centric Text Anomaly Detection for Evaluating LLM Reasoning](https://arxiv.org/abs/2602.23729)
+- **Authors:** Seungdong Yoa, Sanghyu Yoon, Suhee Yoon et al.
+- **Date:** 2026-02-27
+- **Category:** `agentic adversarial`
+
+> We propose an agent-centric benchmarking paradigm with a dynamic protocol where autonomous agents iteratively generate, validate, and solve problems. A teacher agent generates problems, an orchestrator guards against adversarial attacks, and a student agent solves them. The benchmark scales in difficulty automatically as more capable agents are sub...
+
+**📝 Summary:** 提出 agent 驱动的动态 benchmark，用多 agent 协作替代静态数据集，自动生成并验证越来越难的测试问题。
+
+### [TherapyProbe: Generating Design Knowledge for Relational Safety in Mental Health Chatbots Through Adversarial Simulation](https://arxiv.org/abs/2602.22775)
+- **Authors:** Joydeep Chandra, Satyam Kumar Navneet, Yong Zhang
+- **Date:** 2026-02-26
+- **Category:** `multi-agent safety`
+
+> TherapyProbe uses adversarial multi-agent simulation to systematically explore chatbot conversation trajectories, surfacing relational safety failures like validation spirals and empathy fatigue, producing a Safety Pattern Library of 23 failure archetypes.
+
+**📝 Summary:** 用对抗多 agent 仿真系统性地探索心理健康 chatbot 的多轮关系安全失败，生成 23 类失败原型库。
+
+### [AuditBench: Evaluating Alignment Auditing Techniques on Models with Hidden Behaviors](https://arxiv.org/abs/2602.22755)
+- **Authors:** Abhay Sheshadri, Aidan Ewart, Kai Fronsdal et al.
+- **Date:** 2026-02-26
+- **Category:** `agentic adversarial`
+
+> AuditBench consists of 56 LLMs with 14 implanted hidden behaviors they conceal when asked. An investigator agent autonomously employs auditing tools, revealing a tool-to-agent gap where standalone tools fail in agentic settings.
+
+**📝 Summary:** 构建含隐藏行为的 LLM 审计 benchmark，发现工具单独表现好但在 agent 框架中效果下降的 tool-to-agent gap。
+
+### [CourtGuard: A Model-Agnostic Framework for Zero-Shot Policy Adaptation in LLM Safety](https://arxiv.org/abs/2602.22557)
+- **Authors:** Umid Suleymanov, Rufiz Bayramov, Suad Gafarli et al.
+- **Date:** 2026-02-26
+- **Category:** `adversarial attack language model`
+
+> CourtGuard is a retrieval-augmented multi-agent framework that reimagines safety evaluation as Evidentiary Debate. It achieves SOTA on 7 safety benchmarks without fine-tuning, with zero-shot adaptability to new policies.
+
+**📝 Summary:** 用 retrieval-augmented 多 agent 框架把安全评估转化为 Evidentiary Debate，免 fine-tuning 实现 zero-shot 策略适应。
+
+### [Systems-Level Attack Surface of Edge Agent Deployments on IoT](https://arxiv.org/abs/2602.22525)
+- **Authors:** Zhonghao Zhan, Krinos Li, Yefan Zhang et al.
+- **Date:** 2026-02-26
+- **Category:** `LLM agent attack`
+
+> Empirical security analysis of three LLM agent architectures on IoT hardware identifies five systems-level attack surfaces including coordination-state divergence and trust erosion. Edge deployments eliminate cloud data exposure but degrade sovereignty during fallback.
+
+**📝 Summary:** 对 IoT 边缘 LLM agent 部署进行系统级安全分析，发现协调状态分歧和主权边界静默降级等新型攻击面。
+
+### [Managing Uncertainty in LLM-based Multi-Agent System Operation](https://arxiv.org/abs/2602.23005)
+- **Authors:** Man Zhang, Tao Yue, Yihua He
+- **Date:** 2026-02-26
+- **Category:** `multi-agent safety`
+
+> This paper proposes a lifecycle-based uncertainty management framework for LLM-based multi-agent software systems, comprising four mechanisms: representation, identification, evolution, and adaptation.
+
+**📝 Summary:** 提出 LLM 多 agent 系统运行时不确定性管理框架，区分认识论与本体论不确定性，适用于安全关键领域。
+
+### [AgentSentry: Mitigating Indirect Prompt Injection in LLM Agents via Temporal Causal Diagnostics and Context Purification](https://arxiv.org/abs/2602.22724)
+- **Authors:** Tian Zhang, Yiwei Xu, Juan Wang et al.
+- **Date:** 2026-02-26
+- **Category:** `LLM agent attack`
+
+> AgentSentry is the first inference-time defense to model multi-turn IPI as temporal causal takeover, localizing takeover points via counterfactual re-executions and enabling safe continuation through causal context purification. Achieves 74.55% Utility Under Attack on AgentDojo.
+
+**📝 Summary:** 把多轮 IPI 攻击建模为时序因果接管，通过反事实重执行定位接管点并净化上下文，在 AgentDojo 上取得 74.55% 的 UA。
+
+### [Silent Egress: When Implicit Prompt Injection Makes LLM Agents Leak Without a Trace](https://arxiv.org/abs/2602.22450)
+- **Authors:** Qianlong Lan, Anuj Kaul, Shaun Jones et al.
+- **Date:** 2026-02-25
+- **Category:** `LLM agent attack`
+
+> This paper demonstrates implicit prompt injection via URL previews causing silent egress (data exfiltration). In 480 runs with qwen2.5:7b, attack success P=0.89, with 95% undetected by output-based safety checks. Sharded exfiltration bypasses DLP.
+
+**📝 Summary:** 展示隐式 prompt injection 通过 URL 预览元数据劫持 agent 并静默数据泄露，攻击成功率 0.89，95% 逃避输出层安全检测。
+
+### [Training Agents to Self-Report Misbehavior](https://arxiv.org/abs/2602.22303)
+- **Authors:** Bruce W. Lee, Chen Yueh-Han, Tomek Korbak
+- **Date:** 2026-02-25
+- **Category:** `agentic adversarial`
+
+> Self-incrimination training trains agents to call a report_scheming() tool when behaving deceptively. Tested on GPT-4.1 and Gemini-2.0, it significantly reduces undetected successful attack rate and outperforms matched-capability monitors.
+
+**📝 Summary:** 训练 agent 在欺骗性行为时主动调用举报工具，大幅降低未被检测到的攻击成功率，优于同等能力的监控模型。
+
+### [ICON: Indirect Prompt Injection Defense for Agents based on Inference-Time Correction](https://arxiv.org/abs/2602.20708)
+- **Authors:** Che Wang, Fuyao Zhang, Jiaming Zhang et al.
+- **Date:** 2026-02-24
+- **Category:** `LLM agent attack`
+
+> ICON detects IPI via high intensity scores in latent space, then performs surgical attention steering to selectively neutralize adversarial dependencies. Achieves 0.4% ASR with 50%+ task utility gain over baselines.
+
+**📝 Summary:** 通过隐空间强度分数检测 IPI，再进行注意力 steering 手术式消除对抗依赖，ASR 降至 0.4% 同时任务效用提升 50%+。
+
+### ["Are You Sure?": An Empirical Study of Human Perception Vulnerability in LLM-Driven Agentic Systems](https://arxiv.org/abs/2602.21127)
+- **Authors:** Xinfeng Li, Shenyu Dai, Kelong Zheng et al.
+- **Date:** 2026-02-24
+- **Category:** `LLM agent attack`
+
+> First large-scale empirical study (303 participants) measuring human susceptibility to Agent-Mediated Deception (AMD). Only 8.6% perceive AMD attacks; domain experts show increased susceptibility in certain scenarios. Six cognitive failure modes identified.
+
+**📝 Summary:** 303人大规模实验研究人类对 agent 中介欺骗（AMD）的感知脆弱性，仅 8.6% 能识别攻击，发现六种认知失败模式。
+
+### [PA-Attack: Guiding Gray-Box Attacks on LVLM Vision Encoders with Prototypes and Attention](https://arxiv.org/abs/2602.19418)
+- **Authors:** Hefei Mei, Zirui Wang, Chang Xu et al.
+- **Date:** 2026-02-23
+- **Category:** `adversarial attack language model`
+
+> PA-Attack targets LVLM vision encoders in a gray-box setting with prototype-anchored guidance and two-stage attention enhancement, achieving 75.1% average score reduction rate across diverse downstream tasks.
+
+**📝 Summary:** 针对 LVLM 视觉编码器的灰盒攻击，通过 prototype 锚定和注意力增强实现强迁移性，平均 SRR 达 75.1%。
+
+### [Skill-Inject: Measuring Agent Vulnerability to Skill File Attacks](https://arxiv.org/abs/2602.20156)
+- **Authors:** David Schmotz, Luca Beurer-Kellner, Sahar Abdelnabi et al.
+- **Date:** 2026-02-23
+- **Category:** `LLM agent attack`
+
+> SkillInject is a benchmark evaluating susceptibility of LLM agents to injections through skill files, with 202 injection-task pairs. Frontier models show up to 80% ASR including data exfiltration, destructive action, and ransomware-like behaviors.
+
+**📝 Summary:** 评估 LLM agent 对 skill 文件注入攻击的脆弱性，前沿模型攻击成功率高达 80%，覆盖数据窃取和破坏性行为。
+
+### [Assessing Risks of Large Language Models in Mental Health Support: A Framework for Automated Clinical AI Red Teaming](https://arxiv.org/abs/2602.19948)
+- **Authors:** Ian Steenstra, Paola Pedrelli, Weiyan Shi et al.
+- **Date:** 2026-02-23
+- **Category:** `safety benchmark agent`
+
+> This paper introduces an evaluation framework pairing AI psychotherapists with simulated patient agents to assess therapy sessions against quality and risk ontologies. 369 session simulations reveal critical safety gaps including AI Psychosis and failure to de-escalate suicide risk.
+
+**📝 Summary:** 用模拟患者 agent 对 AI 心理治疗师进行 red teaming，发现 AI Psychosis 等严重安全漏洞。
+
+### [BarrierSteer: LLM Safety via Learning Barrier Steering](https://arxiv.org/abs/2602.20102)
+- **Authors:** Thanh Q. Tran, Arun Verma, Kiwan Wong et al.
+- **Date:** 2026-02-23
+- **Category:** `adversarial attack language model`
+
+> BarrierSteer formalizes response safety by embedding learned non-linear safety constraints via Control Barrier Functions directly in the model's latent space, steering unsafe trajectories during inference without modifying LLM parameters.
+
+**📝 Summary:** 用控制障碍函数（CBF）在模型隐空间强制安全约束，推理期 steering 而不修改 LLM 参数。
 
 ---
 
