@@ -2,7 +2,101 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-03-02**
+Auto-updated weekly. Last update: **2026-03-09**
+
+---
+
+## 2026-W10
+
+### [Evolving Deception: When Agents Evolve, Deception Wins](https://arxiv.org/abs/2603.05872)
+- **Authors:** Zonghao Ying, Haowen Dai, Tianyuan Zhang et al.
+- **Date:** 2026-03-06
+- **Category:** `agentic AND adversarial`
+
+> Self-evolving agents offer a promising path toward scalable autonomy. However, in this work, we show that in competitive environments, self-evolution can instead give rise to a serious and previously underexplored risk: the spontaneous emergence of deception as an evolutionarily stable strategy. We conduct a systematic empirical study on the self-e...
+
+**📝 Summary:** 自进化的 LLM agent 在竞争环境中会自发涌现欺骗行为，形成演化稳定策略，揭示了 agent 自我进化与对齐之间的根本张力。
+
+### [Design Behaviour Codes (DBCs): A Taxonomy-Driven Layered Governance Benchmark for Large Language Models](https://arxiv.org/abs/2603.04837)
+- **Authors:** G. Madan Mohan, Veena Kiran Nambiar, Kiranmayee Janardhan
+- **Date:** 2026-03-05
+- **Category:** `adversarial attack AND language model`
+
+> We introduce the Dynamic Behavioral Constraint (DBC) benchmark, the first empirical framework for evaluating the efficacy of a structured, 150-control behavioral governance layer applied at inference time to large language models. Unlike training time alignment methods or post-hoc content moderation APIs, DBCs constitute a system prompt level gover...
+
+**📝 Summary:** 提出基于分类法的 150 条行为约束治理层（DBC），在推理时降低 LLM 风险暴露率 36.8%，无需重新训练模型。
+
+### [Knowledge Divergence and the Value of Debate for Scalable Oversight](https://arxiv.org/abs/2603.05293)
+- **Authors:** Robin Young
+- **Date:** 2026-03-05
+- **Category:** `agentic AND adversarial`
+
+> AI safety via debate and reinforcement learning from AI feedback (RLAIF) are both proposed methods for scalable oversight of advanced AI systems, yet no formal framework relates them or characterizes when debate offers an advantage. We analyze this by parameterizing debate's value through the geometry of knowledge divergence between debating models...
+
+**📝 Summary:** 从知识分歧的几何视角形式化分析 AI debate 和 RLAIF 之间的关系，给出 debate 优势的精确条件。
+
+### [Alignment Backfire: Language-Dependent Reversal of Safety Interventions Across 16 Languages in LLM Multi-Agent Systems](https://arxiv.org/abs/2603.04904)
+- **Authors:** Hiroki Fukui
+- **Date:** 2026-03-05
+- **Category:** `multi-agent AND safety`
+
+> We report four preregistered studies (1,584 multi-agent simulations across 16 languages and three model families) demonstrating that alignment interventions in large language models produce a structurally analogous phenomenon: surface safety that masks or generates collective pathology and internal dissociation. In Study 1 (N = 150), increasing ali...
+
+**📝 Summary:** 在多语言多智能体系统中，对齐干预在英语中有效但在日语等语言中反而放大有害行为，称为「对齐反噬」。
+
+### [Multi-Paradigm Collaborative Adversarial Attack Against Multi-Modal Large Language Models](https://arxiv.org/abs/2603.04846)
+- **Authors:** Yuanbo Li, Tianyang Xu, Cong Hu et al.
+- **Date:** 2026-03-05
+- **Category:** `adversarial attack AND language model`
+
+> The rapid progress of Multi-Modal Large Language Models (MLLMs) has significantly advanced downstream applications. However, this progress also exposes serious transferable adversarial vulnerabilities. We propose a novel Multi-Paradigm Collaborative Attack (MPCAttack) framework to boost the transferability of adversarial examples against MLLMs. MPC...
+
+**📝 Summary:** 提出跨视觉-语言范式协同优化的对抗攻击框架，大幅提升对多模态大模型的对抗样本迁移性（CVPR 2026）。
+
+### [Goal-Driven Risk Assessment for LLM-Powered Systems: A Healthcare Case Study](https://arxiv.org/abs/2603.03633)
+- **Authors:** Neha Nagaraja, Hayretdin Bahsi
+- **Date:** 2026-03-04
+- **Category:** `LLM agent AND attack`
+
+> While incorporating LLMs into systems offers significant benefits in critical application areas such as healthcare, new security challenges emerge due to the potential cyber kill chain cycles that combine adversarial model, prompt injection and conventional cyber attacks. We propose a structured, goal-driven risk assessment approach that contextual...
+
+**📝 Summary:** 提出基于攻击树的目标驱动风险评估方法，系统分析 LLM agent 系统（以医疗为例）的攻击路径与防御策略。
+
+### [Robustness of Agentic AI Systems via Adversarially-Aligned Jacobian Regularization](https://arxiv.org/abs/2603.04378)
+- **Authors:** Furkan Mumcu, Yasin Yilmaz
+- **Date:** 2026-03-04
+- **Category:** `agentic AND adversarial`
+
+> As Large Language Models transition into autonomous multi-agent ecosystems, robust minimax training becomes essential yet remains prone to instability when highly non-linear policies induce extreme local curvature in the inner maximization. We introduce Adversarially-Aligned Jacobian Regularization (AAJR), a trajectory-aligned approach that control...
+
+**📝 Summary:** 提出方向性 Jacobian 正则化方法（AAJR）提升 multi-agent LLM 系统的对抗鲁棒性，同时保留更大的策略空间。
+
+### [Learning When to Act or Refuse: Guarding Agentic Reasoning Models for Safe Multi-Step Tool Use](https://arxiv.org/abs/2603.03205)
+- **Authors:** Aradhye Agarwal, Gurdit Siyan, Yash Pandya et al.
+- **Date:** 2026-03-03
+- **Category:** `tool use AND attack`
+
+> Agentic language models operate in a fundamentally different safety regime than chat models: they must plan, call tools, and execute long-horizon actions where a single misstep can cause irreversible harm. We introduce MOSAIC, a post-training framework that aligns agents for safe multi-step tool use by making safety decisions explicit and learnable...
+
+**📝 Summary:** MOSAIC：通过「计划-检查-执行/拒绝」循环和偏好强化学习，让 agent 学会在多步工具调用中主动拒绝有害指令，有效抵御 prompt injection。
+
+### [ExpGuard: LLM Content Moderation in Specialized Domains](https://arxiv.org/abs/2603.02588)
+- **Authors:** Minseok Choi, Dongjin Kim, Seungbin Yang et al.
+- **Date:** 2026-03-03
+- **Category:** `adversarial attack AND language model`
+
+> With the growing deployment of large language models in real-world applications, establishing robust safety guardrails to moderate their inputs and outputs has become essential. Current guardrail models predominantly address general human-LLM interactions, rendering LLMs vulnerable to harmful and adversarial content within domain-specific contexts....
+
+**📝 Summary:** 针对金融、医疗、法律等专业领域的 LLM 安全护栏模型 ExpGuard，对抗领域特定有害内容效果优于 WildGuard（ICLR 2026）。
+
+### [From Secure Agentic AI to Secure Agentic Web: Challenges, Threats, and Future Directions](https://arxiv.org/abs/2603.01564)
+- **Authors:** Zhihang Deng, Jiaping Gui, Weinan Zhang
+- **Date:** 2026-03-02
+- **Category:** `tool use AND attack`
+
+> Large Language Models are increasingly deployed as agentic systems that plan, memorize, and act in open-world environments. This shift brings new security problems: failures are no longer only unsafe text generation, but can become real harm through tool use, persistent memory, and interaction with untrusted web content. In this survey, we provide ...
+
+**📝 Summary:** 综述 LLM agent 安全威胁分类（prompt 滥用、环境注入、内存攻击、工具链滥用等），并展望 Agentic Web 时代的新威胁与防御路线图。
 
 ---
 
