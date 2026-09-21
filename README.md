@@ -2,7 +2,209 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-09-07**
+Auto-updated weekly. Last update: **2026-09-21**
+
+---
+
+## 2026-W38
+
+### [SWE-Proof: Can Language Models Resolve Real-World Issues with Machine-Checked Proofs?](https://arxiv.org/abs/2609.21190v1)
+- **Authors:** George Ma, Benjamin Mikek, Haoyu Li et al.
+- **Date:** 2026-09-18
+- **Category:** `"agentic" AND "adversarial"`
+
+> Ensuring the correctness of LLM-generated code is a core challenge for modern software engineering. Benchmarks for agentic code generation check correctness with held-out test suites, which are inherently incomplete and increasingly susceptible to memorization. Formal verification avoids both problems, but existing work covers only standalone tasks...
+
+**📝 Summary:** SWE-Proof：探索用机器可检查证明而非测试用例，评测 LLM 能否正确解决真实代码仓库中意图模糊的 issue。
+
+### [Provisional Reachability: Containing Agents by Making Every Crossing Revocable](https://arxiv.org/abs/2609.21957v1)
+- **Authors:** Yoshiaki Takashita
+- **Date:** 2026-09-18
+- **Category:** `"agentic" AND "adversarial"`
+
+> A companion paper found that what a defender must block over time has units: bits per period [Takashita, 2026a]. This paper sets it. Hold every crossing in escrow for one period, audit each held item independently with probability r, and revoke the window if any audit catches something. An adversary crossing k times, each carrying c bits, expects k...
+
+**📝 Summary:** 提出「可撤销穿越」机制，将每次 agent 跨边界行为托管审计一段时间，理论给出对抗者信息泄露量的上界。
+
+### [APort Vault: Benchmarking AI Agent Payment Authorization with the Open Agent Passport](https://arxiv.org/abs/2609.22076v1)
+- **Authors:** Uchi Uchibeke
+- **Date:** 2026-09-18
+- **Category:** `"tool use" AND "attack"`
+
+> APort Vault is a benchmark for payment authorization in tool-using AI agents. It replays 4,371 attacks written by humans against a live payment agent during a public capture-the-flag event, across 14 models from 8 labs, five policy configurations and two replay tracks, with and without a deterministic pre-action check implementing the Open Agent Pa...
+
+**📝 Summary:** APort Vault：基于真实 CTF 活动中 4000+ 次人类攻击，对 8 家实验室 14 个模型的支付授权 agent 做大规模红队评测。
+
+### [CIPL: A Channel-Aware Framework for Recoverable Privacy Leakage in LLM Agents](https://arxiv.org/abs/2609.21686v1)
+- **Authors:** Tao Huang, Guosen Wu, Guolong Zheng et al.
+- **Date:** 2026-09-18
+- **Category:** `"tool use" AND "attack"`
+
+> Privacy leakage in LLM agents is commonly evaluated within individual components such as memory, retrieval, or tool-use pipelines, which makes it difficult to distinguish internal exposure from information that an external observer can actually recover. We present CIPL (Channel Inversion for Privacy Leakage), a channel-aware evaluation framework fo...
+
+**📝 Summary:** CIPL：面向 LLM agent 的信道感知隐私泄露评测框架，区分内部暴露与外部观察者可实际恢复的信息。
+
+### [UnifiedPlayers: Enhance Tool-Integrated Reasoning in Agentic Reinforcement Learning](https://arxiv.org/abs/2609.20089v1)
+- **Authors:** Wenjie Liao, Liangjie Zhao, Zehong Cao
+- **Date:** 2026-09-17
+- **Category:** `"agentic" AND "adversarial"`
+
+> Self-evolving methods reduce the need for human-annotated trajectories by allowing tool-using agents to generate their own training data. Yet existing methods typically separate trajectory generation from evaluation, relying on static verifiers that cannot adapt to emerging failure modes or self-consistency signals that may reinforce errors shared ...
+
+**📝 Summary:** UnifiedPlayers：联合训练规划、执行、评估三个角色，改进工具集成推理 agent 的自我进化式强化学习。
+
+### [SoK: Trading Agents or Market Crashers? Dissecting Robustness and Security Failures in Academic Financial LLM Trading Schemes](https://arxiv.org/abs/2609.19705v1)
+- **Authors:** Mengxiao Wang, Nitesh Saxena
+- **Date:** 2026-09-17
+- **Category:** `"LLM agent" AND "attack"`
+
+> Autonomous large language model (LLM) agents are moving rapidly into high-stakes domains, yet existing agentic-AI security studies remain largely domain-agnostic and overlook the distinctive, high-consequence attack surface such settings create. We examine this gap through financial trading agents, a representative case of high-stakes agentic secur...
+
+**📝 Summary:** SoK 系统化梳理金融交易 LLM agent 方案中的鲁棒性与安全失败模式，指出高风险领域特有的攻击面。
+
+### [Safety-Critical Scenarios Emerge from Initial Scenes](https://arxiv.org/abs/2609.20103v2)
+- **Authors:** Yin Wu, Jiarong Wei, Carl Esselborn et al.
+- **Date:** 2026-09-17
+- **Category:** `"agentic" AND "adversarial"`
+
+> Safety-critical driving scenario generation has largely focused on manipulating the behavior of surrounding agents while starting from an initial scene from driving data. This assumption can limit the space of discoverable failures, since driving data can provide little opportunity for meaningful interaction. For example, in the Waymo Open Motion D...
+
+**📝 Summary:** 指出自动驾驶安全关键场景生成过度依赖真实初始场景（很多场景无交互空间），提出从更广泛初始场景中主动挖掘安全关键情形。
+
+### [Xeno-Interpretability: Investigating the Alien Minds of LLMs](https://arxiv.org/abs/2609.20408v1)
+- **Authors:** F. Pierucci, M. Bracale Syrnikov, M. Prandi et al.
+- **Date:** 2026-09-17
+- **Category:** `"multi-agent" AND "safety"`
+
+> Large language models are usually interpreted through concepts that humans already possess: truthfulness, refusal, deception, personality, harmfulness, and related categories. This paper asks whether models may also represent and use distinctions for which no adequate human concept exists. We call such internal structures xeno-representations, and ...
+
+**📝 Summary:** 提出「异种可解释性」概念，探究 LLM 内部是否存在人类现有概念无法描述的原生表征结构。
+
+### [Robust Workflow Generation via Adversarial Learning for Audio Deepfake Detection](https://arxiv.org/abs/2609.20063v1)
+- **Authors:** Xiang Li, Pin-Yu Chen, Wenqi Wei
+- **Date:** 2026-09-17
+- **Category:** `"agentic" AND "adversarial"`
+
+> The rapid advancement of speech synthesis and voice conversion technologies has made audio deepfakes increasingly realistic, posing serious security risks in practical applications. While existing detection methods achieve strong performance under controlled conditions, they often fail to generalize under real-world perturbations and corruptions. I...
+
+**📝 Summary:** ROGUE：通过对抗学习动态编排多个检测工具，生成更鲁棒的音频深度伪造检测工作流。
+
+### [Deep Noir: Autonomous Steering Discovery via Architectural Chronometry in Transformer Models](https://arxiv.org/abs/2609.20722v1)
+- **Authors:** Frank E. Bobe, Gregory D. Vetaw, Darshan W. Bryner et al.
+- **Date:** 2026-09-17
+- **Category:** `"prompt injection" AND "agent"`
+
+> Activation steering modifies LLM behavior at inference time, but identifying where and how strongly to steer remains manual. We introduce Deep Noir, a framework that uses Logit Lens convergence and causal head-level attribution to autonomously discover optimal steering parameters. Across three scales (1B x 3, 2-3B x 2, and 7-9B x 4), our engine ach...
+
+**📝 Summary:** Deep Noir：用 Logit Lens 收敛与因果头部归因自动发现最优激活转向（steering）参数，无需人工调参。
+
+### [Red-Teaming Auto Mode: Improving Blocking Classifiers Against Malign Coding Agents](https://arxiv.org/abs/2609.19587v1)
+- **Authors:** Alex Remedios, Simon Storf, Fabien Roger et al.
+- **Date:** 2026-09-17
+- **Category:** `"prompt injection" AND "agent"`
+
+> To keep coding agents from going off the rails, production systems now review each proposed action with a blocking monitor that can reject it before it runs (Auto Mode in Claude Code, Guardian in OpenAI's Codex). Prior evaluations of such monitors largely measure robustness to accidental harm or prompt injections from untrusted sources looking to h...
+
+**📝 Summary:** 研究持续恶意（misaligned）编码 agent 如何对抗性地绕过生产环境的动作拦截分类器（如 Claude Code Auto Mode、Codex Guardian）。
+
+### [SAGE: Safety-Aligned Gradient Enforcement for Human--Robot Collaboration](https://arxiv.org/abs/2609.21130v1)
+- **Authors:** Yisen Li, Hao Zhang, Ruize Geng et al.
+- **Date:** 2026-09-17
+- **Category:** `"multi-agent" AND "safety"`
+
+> Multi-party human-robot collaboration poses a dual challenge: robot decisions should remain interpretable and auditable, while executed actions must satisfy safety constraints during physical interaction. Combining explainable decision-tree policies with control-barrier-function (CBF) filtering provides a promising architecture but creates two lear...
+
+**📝 Summary:** SAGE：结合可解释决策树策略与控制屏障函数，解决多智能体强化学习中人机协作的安全投影与梯度失配问题。
+
+### [CaMeLoT: CaMeL orchestrated with Temporal logic for static verification and liveness](https://arxiv.org/abs/2609.18674v1)
+- **Authors:** Elia Nikolaou, Magnus Wiik Eckhoff, Robert Flood et al.
+- **Date:** 2026-09-16
+- **Category:** `"prompt injection" AND "agent"`
+
+> LLM-based agents generate and execute multi-step plans that invoke external tools which can access private data or execute commands. In this setting, security is a property of the entire execution that a plan creates, not just any single step. The plan itself is a critical artefact that captures the tool calls, control flow, and data dependencies. ...
+
+**📝 Summary:** CaMeLoT：在 CaMeL 基础上加入时序逻辑做静态验证，保证工具调用 agent 计划的活性（liveness）与安全性。
+
+### [AgentLSD: Evaluating AI Security Agents Under Adversarial Task Contamination](https://arxiv.org/abs/2609.19140v1)
+- **Authors:** Matteo Golinelli, Idilio Drago, Matteo Boffa et al.
+- **Date:** 2026-09-16
+- **Category:** `"prompt injection" AND "agent"`
+
+> AI agents for security inspect web pages, source code, logs, configuration files, and command outputs. These environments may contain deceptive artifacts that influence the agent's behavior. We call this adversarial task contamination. Whereas prompt injection relies on attacker-supplied instructions, task contamination also includes non-instructio...
+
+**📝 Summary:** AgentLSD：研究安全类 agent 面对「对抗性任务污染」（伪造结果、诱饵端点等非指令性欺骗证据）时的鲁棒性。
+
+### [The Verifiable Action Card: Trustworthy Human-in-the-Loop Control for Secure Autonomous Agents](https://arxiv.org/abs/2609.18411v1)
+- **Authors:** Hasnain Irshad, Anam Mughees, Neelam Mughees et al.
+- **Date:** 2026-09-16
+- **Category:** `"prompt injection" AND "agent"`
+
+> Agentic browsers can execute security-sensitive actions under a user's authenticated session, making indirect prompt injection and deceptive confirmation interfaces a direct threat to action integrity. Existing human-in-the-loop (HITL) safeguards are insufficient when the approval prompt itself can be influenced by untrusted page content or model-g...
+
+**📝 Summary:** 提出 Verifiable Action Card：在 HITL 审批时从可信来源重建操作信息，防止页面注入内容污染确认弹窗，抵御间接提示注入。
+
+### [CARES: A Conversational AI System for Regulation-Grounded Safety Reporting in Construction Education](https://arxiv.org/abs/2609.19429v1)
+- **Authors:** Fan Yang, Jiabin Wu, Yuan Tian et al.
+- **Date:** 2026-09-16
+- **Category:** `"multi-agent" AND "safety"`
+
+> Construction safety reporting often relies on manual logs and static templates that provide limited feedback and leave daily activities disconnected from relevant regulations. This paper introduces CARES (Conversational AI Reporting for Enhanced Safety), a conversational AI system that integrates regulatory guidance into daily reporting to support ...
+
+**📝 Summary:** CARES：面向建筑安全教育的对话式 AI 系统，结合多智能体对话、RAG 与法规落地的安全报告生成。
+
+### [MAGS: Multi-agent Auto-formalization Guarantees Safety for Agentic Outputs](https://arxiv.org/abs/2609.19391v1)
+- **Authors:** Albert Wu, Nicholas Roberts, Tzu-Heng Huang et al.
+- **Date:** 2026-09-16
+- **Category:** `"multi-agent" AND "safety"`
+
+> LLM coding agents now generate complex programs at a scale that makes thorough human review increasingly difficult, raising the risk of safety and security failures. Common approaches, including fuzz testing, static analysis, and LLM-as-a-Verifier, can detect many failures but struggle to cover all possible edge cases. Formal verification addresses...
+
+**📝 Summary:** MAGS：多智能体自动形式化框架，为 LLM 编码 agent 的输出提供机器可检查的安全性保证。
+
+### [ASLEval: Measuring Privacy Exposure Displacement in LLM Agent Sessions](https://arxiv.org/abs/2609.18864v2)
+- **Authors:** Guosen Wu, Huizhen Huang, Guoxiong Long et al.
+- **Date:** 2026-09-16
+- **Category:** `"tool use" AND "attack"`
+
+> Privacy evaluations of tool-using LLM agents often inspect a designated action, final response, or attacker report. These local proxies can miss unauthorized exposure elsewhere in a multi-step session and lack common ground truth across outlets, reports, and tool paths. We introduce privacy exposure displacement, the mismatch between a local evalua...
+
+**📝 Summary:** ASLEval：提出「隐私暴露位移」概念及配套框架，度量 agent 会话中本地评测代理与真实目标暴露之间的偏差。
+
+### [Benchmarking Factual Robustness of LLMs via Multi-conversation Persuasion](https://arxiv.org/abs/2609.16777v1)
+- **Authors:** Zhuoang Cai
+- **Date:** 2026-09-15
+- **Category:** `"red teaming" AND "LLM"`
+
+> As Large Language Models (LLMs) increasingly serve as primary knowledge retrieval interfaces, their robustness against \textit{persuasion attacks}---attempts to inject misinformation or enforce counterfactuals---has become a critical safety concern. Existing red-teaming frameworks typically evaluate models in multi-turn dialogues where the target m...
+
+**📝 Summary:** 发现多轮说服攻击中的「拒绝惯性」缺陷：模型一旦拒绝就倾向持续拒绝，掩盖了真实的说服鲁棒性，提出改进的红队评测框架。
+
+### [Emergence World: Adversarial Stress-Testing of Long-Horizon Multi-Agent Systems](https://arxiv.org/abs/2609.17320v1)
+- **Authors:** Deepak Akkil, Tamer Abuelsaad, Karthik Vikram et al.
+- **Date:** 2026-09-15
+- **Category:** `"multi-agent" AND "safety"`
+
+> As AI agents move from bounded tasks to persistent deployments, failures can propagate through memory, tools, other agents, and environmental state long after their interactions. This creates a safety regime that cannot be characterized by evaluating model responses in isolation. Emergence World, is a continuously running multi-agent environment fo...
+
+**📝 Summary:** Emergence World：让 8 组 10-agent 长时程多智能体系统持续运行以做对抗压力测试，观察故障如何跨记忆/工具/agent 传播。
+
+### [Test-Time Unlearning via Sparse Autoencoder](https://arxiv.org/abs/2609.16229v1)
+- **Authors:** Pingzhi Li, Jinhao Duan, Vaishnav Tadiparthi et al.
+- **Date:** 2026-09-14
+- **Category:** `"adversarial attack" AND "language model"`
+
+> Machine unlearning aims to remove specific knowledge from a trained large language model (LLM) without retraining from scratch. Existing methods modify model weights via gradient ascent and its advances. While effective on certain benchmarks, these weight-based approaches exhibit a sharp forget-utility trade-off, where stronger forgetting of target...
+
+**📝 Summary:** 提出 ARIA：用稀疏自编码器在测试时定位并抑制目标知识特征，缓解遗忘-效用权衡且更抗重新出现。
+
+### [BLINDSPOT: A Benchmark for Safety and Refusal Calibration in Long-Horizon Tool-Using Agents](https://arxiv.org/abs/2609.16305v1)
+- **Authors:** Sadia Asif, Mohammad Mohammadi Amiri, Momin Abbas et al.
+- **Date:** 2026-09-14
+- **Category:** `"agent safety"`
+
+> Large language model (LLM) agents increasingly operate over long-horizon interactions involving tool use, persistent state, evolving authorization, and external environment feedback. In such settings, safety failures may emerge only after multiple turns, yet existing evaluations often reduce agent behavior to task or attack success, obscuring wheth...
+
+**📝 Summary:** BLINDSPOT：面向长时程工具调用 agent 的安全与拒绝校准 benchmark，关注轨迹级别而非单次任务/攻击成功率。
 
 ---
 
