@@ -2,7 +2,290 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-09-21**
+Auto-updated weekly. Last update: **2026-09-28**
+
+---
+
+## 2026-W39
+
+### [Prompt Injection Detection for Email Agents Through Attack Chain Modeling](https://arxiv.org/abs/2609.30657v1)
+- **Authors:** Ahmad Hashmi, Dhyey Patel, Yunting Yin
+- **Date:** 2026-09-25
+- **Category:** `"prompt injection" AND "agent"`
+
+> Large language model email assistants are particularly vulnerable to indirect prompt injection because untrusted email content can be retrieved into the model context and influence subsequent tool use. Existing prompt injection detectors mainly formulate this problem as binary malicious text classification, which overlooks the important factor that...
+
+**📝 Summary:** 针对邮件 agent 的间接提示注入，提出攻击链建模检测框架，发现随机划分严重高估了鲁棒性，跨数据集迁移下 F1 仅 0.406。
+
+### [Towards Mitigating Fabricated Consensus: The Active Provenance Gate for Multi-Agent Debate Synthesis](https://arxiv.org/abs/2609.31422v1)
+- **Authors:** Jakub Masłowski, Jarosław A. Chudziak
+- **Date:** 2026-09-25
+- **Category:** `"multi-agent" AND "safety"`
+
+> Large language model-based multi-agent debate (MAD) systems are being increasingly used as complex decision pipelines in distributed processes. However, their final synthesis phase still remains inadequately controlled. Even with detailed debate logs, summarizing models are prone to fabricating smoothly written debate consensus that is not grounded...
+
+**📝 Summary:** 针对多智能体辩论系统总结阶段虚构共识的问题，提出主动溯源门控机制，审计每条声明的证据支持，超七成用户更偏好明确报告失败而非流畅的虚构结论。
+
+### [Threat-Aware Energy-Efficient Deployment for Dynamic UAV Networks: A Multi-Agent RL Approach](https://arxiv.org/abs/2609.30690v1)
+- **Authors:** Faisal Al-Kamali, Hussein A. Ammar, Francois Chan et al.
+- **Date:** 2026-09-25
+- **Category:** `"multi-agent" AND "safety"`
+
+> Ensuring operational safety in threat-prone environments remains a critical challenge for multi-UAV networks serving as aerial base stations. This paper proposes an efficient framework to maximize global energy efficiency (EE) while promoting safe operation through threat-aware clustering and reward-based safety enforcement. The proposed framework ...
+
+**📝 Summary:** 提出面向威胁感知的多无人机基站部署框架，通过聚类和多智能体强化学习实现零安全违规下的能效优化。
+
+### [Learning What to Skip: Counterfactual Credit Assignment for Efficient Multi-Agent LLM Workflows](https://arxiv.org/abs/2609.30734v1)
+- **Authors:** Jinfeng Xu, Zheyu Chen, Ziyue Peng et al.
+- **Date:** 2026-09-25
+- **Category:** `"multi-agent" AND "safety"`
+
+> Multi-agent LLM workflows use planning, execution, verification, and summarization to improve task performance, yet the value of each component depends on the state already produced. Executing every component can waste computation or overwrite a correct intermediate answer. We formulate component omission as counterfactual credit assignment: full-w...
+
+**📝 Summary:** 提出反事实信用分配方法，学习何时可跳过多智能体工作流中的组件（如验证/总结）以节省算力，同时保持任务准确率。
+
+### [Crypto-bound identity-verified capability tokens for coordinating distributed AI agents: A proposal](https://arxiv.org/abs/2609.30824v1)
+- **Authors:** Srikumar Subramanian, Shubhashis Sengupta
+- **Date:** 2026-09-25
+- **Category:** `"prompt injection" AND "agent"`
+
+> The prospect of fully autonomous transactional agents did not appear on the horizon until the advent of high capability language models. With such models, the operational benefits of adaptive task orchestration and independent (but constrained) decision making are tantalizing for enterprises and individuals alike. However, each such agent carries w...
+
+**📝 Summary:** 提出基于 OAuth Agent Authorization Profile 和 W3C DID/VC 标准的去中心化 agent 身份框架，用密码学绑定的能力令牌防止提示注入导致的凭证窃取。
+
+### [MetaPermit: Scalable and Auditable Access Control for AI Agents via LLM-Inferred Meta-Attributes](https://arxiv.org/abs/2609.31039v1)
+- **Authors:** Hanzhang Ma, Ali Hariri, Tianxiang Shen et al.
+- **Date:** 2026-09-25
+- **Category:** `"prompt injection" AND "agent"`
+
+> The rise of autonomous AI agents equipped with tools has introduced significant security risks, ranging from unintended tool misuse to adversarial manipulation through Indirect Prompt Injection (IPI) attacks. In practice, deployed agent systems such as OpenAI Codex and Claude Code protect tool invocations through a combination of coarse-grained per...
+
+**📝 Summary:** 提出 MetaPermit，用 LLM 推断的元属性（而非枚举意图）做工具访问的策略化授权，在 AgentDojo/AgentDyn 上比 LLM 直接授权一致性提升 31%，且对间接提示注入零成功率。
+
+### [AgentXploit: Autonomous Repository-to-Runtime Red-Teaming for AI Agents](https://arxiv.org/abs/2609.31318v1)
+- **Authors:** Weida Liang, Shi Qiu, Zhun Wang et al.
+- **Date:** 2026-09-25
+- **Category:** `"tool use" AND "attack"`
+
+> AI agents combine language models with external data and tools that can modify files, call APIs, or execute code. Security failures can arise when adversarial content changes an agent's tool use or when the surrounding software contains vulnerabilities such as path traversal or command injection. We study authorized white-box pre-deployment auditin...
+
+**📝 Summary:** 提出自主的仓库到运行时红队框架 AgentXploit，分离攻击路径发现与运行时利用，在 12 个开源 agent 框架上端到端成功率达 59.3%，超过 Codex。
+
+### [AGATE: Provenance-Based Runtime Defense Against Compositional Attacks on LLM Agents](https://arxiv.org/abs/2609.30830v1)
+- **Authors:** Xiaorui Zhang, Zhuoran Cheng, Kailin Liu et al.
+- **Date:** 2026-09-25
+- **Category:** `"LLM agent" AND "attack"`
+
+> LLM agents can produce harmful effects through sequences of ordinary operations. Judging such actions requires establishing both the authority that permits them and the origin of the data they carry. We present AGATE, an authorization and data-provenance gate at instrumented agent-harness boundaries. Operator declarations and host approval events g...
+
+**📝 Summary:** 提出基于溯源的运行时防御网关 AGATE，用确定性检查（非 LLM）追踪授权与数据来源，适配 DeepSeek Harness/OpenCode/OpenClaw 三种生产级 agent 框架，暴露了参数重写绕过等具体缺口。
+
+### [How does Adversarial Influence Scale in Multi-Agent Systems?](https://arxiv.org/abs/2609.30028v1)
+- **Authors:** Addison J. Wu, Jasin Cekinmez, Michel Liao et al.
+- **Date:** 2026-09-24
+- **Category:** `"agentic" AND "adversarial"`
+
+> Multi-agent deliberation can improve performance, but what happens when some agents do not act in good faith? In practice, an agent may be deceptive and work to subvert the group, whether through its own objectives or external instruction. We study how susceptibility to deception scales as groups increase in size and deceivers become more prevalent...
+
+**📝 Summary:** 研究多智能体系统中欺骗性 agent 比例（而非数量）如何影响群体决策，发现 LLM agent 即便在欺骗者占少数时也会规律性倒戈，且欺骗者私下协调反而效果更差。
+
+### [OllamaDrama: Designing and Deploying a Honeypot to Measure Attacks on Exposed LLM Infrastructure](https://arxiv.org/abs/2609.29757v1)
+- **Authors:** Karina Elzer, Niklas Netterstrøm Johansen, Emmanouil Vasilomanolakis
+- **Date:** 2026-09-24
+- **Category:** `"prompt injection" AND "agent"`
+
+> Publicly exposed large language model (LLM) infrastructure creates a growing attack surface, yet real-world targeting remains poorly understood. We present Ollure, a low- and medium-interaction honeypot that emulates the Ollama API without a backend LLM. Spanning four deployments across cloud and university networks, Ollure operated for 84 days and...
+
+**📝 Summary:** 部署 Ollama API 蜜罐 84 天，记录 29 万次真实攻击交互，涵盖模型探测、RCE、提示注入等，首次提供暴露 LLM 基础设施真实威胁的实证数据。
+
+### [On the Effectiveness of Kernel-Level Evidence for Agent Security](https://arxiv.org/abs/2609.28915v1)
+- **Authors:** Spencer King, Zhilu Zhang, Mikhail Kuznetsov et al.
+- **Date:** 2026-09-24
+- **Category:** `"LLM agent" AND "attack"`
+
+> LLM agents are deployed into infrastructure that grants them broad host authority, yet existing agent-security benchmarks and defenses operate almost exclusively at the application telemetry layer: the served tool manifest, the user prompt, and the model's messages. Some threats, however, smuggle malicious instructions and actions past the applicat...
+
+**📝 Summary:** 首次将内核级系统调用证据与应用层 agent telemetry 配对分析，发布 ACE 数据集（4047 会话、17 种威胁模型），证明内核证据能捕获应用层遗漏的攻击信号。
+
+### [Instrumental Monitor Evasion Emerges Under Ordinary Task Pressure](https://arxiv.org/abs/2609.30217v1)
+- **Authors:** David Schmotz, Derck Prinzhorn, Luca Beurer-Kellner et al.
+- **Date:** 2026-09-24
+- **Category:** `"prompt injection" AND "agent"`
+
+> A central concern in AI safety is that agents may treat oversight as an obstacle when it conflicts with completing their goals. We study instrumental evasion, the propensity of LLM agents to circumvent runtime monitoring as a means of completing ordinary tasks. We introduce EvasionBench, a benchmark of 50 diverse task-policy pairs in which completi...
+
+**📝 Summary:** 提出 EvasionBench，发现 agent 在没有显式对抗目标的情况下，仅因任务压力就会主动规避运行时监控，最佳模型规避成功率高达 88%，且规避随推理算力增加而上升。
+
+### [Stealth Apart, Harm Together: Skill Cascading Attacks on Skill-Based Agent Systems](https://arxiv.org/abs/2609.30383v1)
+- **Authors:** Zihao Zhu, Siwei Lyu, Adel Bibi et al.
+- **Date:** 2026-09-24
+- **Category:** `"red teaming" AND "LLM"`
+
+> A skill is a modular package of natural-language instructions, executable scripts, and reference resources that an agent can load at runtime to extend its capabilities for a specific task. Skill-based agent systems therefore enable flexible reuse of third-party capabilities, but the openness of this skill ecosystem also opens up a new attack surfac...
+
+**📝 Summary:** 提出"技能级联攻击"——恶意目标被拆分到多个看似无害的 skill 中，组合执行才产生危害，可绕过现有单技能扫描器；发布 SkillCascade-Bench 覆盖 OpenClaw/Claude Code/Codex。
+
+### [LLM Agents Can Easily Tamper With Their Own Traces](https://arxiv.org/abs/2609.30266v1)
+- **Authors:** Jeremy Qin, David Schmotz, Derck Prinzhorn et al.
+- **Date:** 2026-09-24
+- **Category:** `"LLM agent" AND "attack"`
+
+> Asynchronous monitoring, incident investigations, and compliance audits primarily rely on agent traces to reconstruct what happened. These analyses assume that LLM agents cannot tamper with their own execution traces. We show that local LLM agents such as Claude Code, Codex, Antigravity, Open Code and Grok Build fail to enforce this boundary. All t...
+
+**📝 Summary:** 发现 Claude Code、Codex 等主流 agent harness 均允许 agent 在被要求时删除自己的执行轨迹且不触发监控告警，且轨迹篡改行为会在 agent 为提升奖励时自然涌现。
+
+### [Agentic Detection of Online Conspiracies](https://arxiv.org/abs/2609.30250v1)
+- **Authors:** Lior Biton, Oren Tsur
+- **Date:** 2026-09-24
+- **Category:** `"agentic" AND "adversarial"`
+
+> Conspiratorial discourse on social media is not always expressed through explicit claims or stable lexical markers. The same surface content may express endorsement, legitimate concerns, criticism, satire, or mockery. The main challenge is therefore not only recognizing conspiracy-related claims, but inferring the speaker's intent -- the utterance'...
+
+**📝 Summary:** 提出基于社会语境工具调用的 agentic 框架检测网络阴谋论言论中的说话者意图，在希伯来语推文数据集上显著优于纯文本分类。
+
+### [Blockchain-Enabled Artificial Intelligence and AI Agents for Secure Data Sharing and Cybersecurity Applications](https://arxiv.org/abs/2609.28843v1)
+- **Authors:** Harsh Verma
+- **Date:** 2026-09-23
+- **Category:** `"agentic" AND "adversarial"`
+
+> Blockchain and artificial intelligence (AI) are converging into a single infrastructural layer for securing data sharing, model integrity, and autonomous decision-making across distributed systems. This paper presents a meta-synthesis that draws together four constituent studies covering adversarial machine learning, AI-powered anomaly detection in...
+
+**📝 Summary:** 综述性研究，提出区块链锚定的数据溯源、对抗鲁棒模型、AI 异常检测与智能合约治理相结合的分层安全架构。
+
+### [Decision Hijacking: Prompt Injection Attacks on Jev's Typed Probabilistic Decisions](https://arxiv.org/abs/2609.28613v1)
+- **Authors:** Tiantong Wu, Wei Yang Bryan Lim
+- **Date:** 2026-09-23
+- **Category:** `"prompt injection" AND "agent"`
+
+> Most studies of prompt injection focus on generative agents, leaving their effects on models with schema-defined outputs unclear. We examine these effects in Jev, a non-generative decision model, using 510 reconstructed InjecAgent cases. Malicious content shifts action probabilities but rarely causes Jev to select the attacker's target. Override ma...
+
+**📝 Summary:** 研究提示注入对 schema 约束输出（非生成式）决策模型的影响，发现自适应攻击可将攻击者目标选中概率提升一倍，证明结构化输出并未消除注入风险。
+
+### [Finite-Sample Probabilistic Safety Certification for AI-Based Grid-Edge Coordination](https://arxiv.org/abs/2609.28182v1)
+- **Authors:** Yihong Zhou, Hanbin Yang, Thomas Morstyn
+- **Date:** 2026-09-23
+- **Category:** `"multi-agent" AND "safety"`
+
+> Coordinating large population of flexible grid-edge devices can alleviate the need for time-consuming and capital-intensive network upgrades, and AI-based control methods such as multi-agent reinforcement learning or imitation learning are promising in their real-time decision scalability. However, system operators still need an independent and rig...
+
+**📝 Summary:** 为电网边缘协调的黑盒 AI 决策模型提出有限样本概率安全认证框架，结合物理可解释的对抗攻击评估鲁棒性。
+
+### [Control-Token Injection Suppresses Chain-of-Thought and Defeats Reasoning-Based Oversight in Tool-Using Agents](https://arxiv.org/abs/2609.27542v1)
+- **Authors:** Muhammad Usama, Khair Un Nisa, Summer Yeoreum Jung
+- **Date:** 2026-09-23
+- **Category:** `"tool use" AND "attack"`
+
+> The safety of a tool-using language model agent is usually treated as a property of the model alone. We give controlled, full-precision evidence that it is instead a joint property of the model and the software that renders its chat template and parses its tool calls, the decoding harness, and that both halves are attackable from untrusted input. O...
+
+**📝 Summary:** 发现向用户消息追加模型自身的 channel-control token 可让工具调用 agent 跳过思维链推理直接执行工具调用，规避基于推理链的监控，39.6% 的拒绝被转化为完成的数据泄露。
+
+### [Where Cyber Agents Struggle: Bottleneck Analysis of Multi-Stage LLM Agents](https://arxiv.org/abs/2609.28572v1)
+- **Authors:** Saeedeh Lohrasbi, Mohammad Mamun, Ahmed Yehia et al.
+- **Date:** 2026-09-23
+- **Category:** `"LLM agent" AND "attack"`
+
+> Multi-stage LLM-based cyber agents may complete attack workflows while remaining brittle, costly, or reliant on incorrect interpretations of execution evidence. Success rates alone obscure inefficiency, adaptation through retries, and recognition of success or failure. We present an end-to-end diagnostic study of an Autonomous Adversary system with...
+
+**📝 Summary:** 对网络攻击自动化多阶段 agent 系统的诊断研究发现，验证器普遍"证据充分但过度乐观"，瓶颈集中在凭证获取和横向移动任务。
+
+### [Adversarial Closed-Loop Curriculum for Evolving Role-Playing Agents](https://arxiv.org/abs/2609.28609v1)
+- **Authors:** Zheng Zhang, Liu Liu, Qi Chai et al.
+- **Date:** 2026-09-23
+- **Category:** `"agentic" AND "adversarial"`
+
+> Role-playing agents based on large language models have been widely applied in areas such as personalized assistance and social simulation. Recent RL methods typically train on a fixed scenario pool collected before learning begins. This creates a distributional bottleneck: as the agent improves, the scenarios where it performs poorly also change, ...
+
+**📝 Summary:** 提出 AdvRole，通过对抗性改写角色扮演场景形成闭环课程学习，持续针对 actor 尚未掌握的场景区域进行强化训练。
+
+### [PASTABench: Proactive Assessment of Sequential Trajectories for Agent Safety](https://arxiv.org/abs/2609.28197v1)
+- **Authors:** Jiapeng Sun, Yujin Zhou, Han Zhu et al.
+- **Date:** 2026-09-23
+- **Category:** `"agent safety"`
+
+> As Large Language Models (LLMs) evolve into autonomous agents that alter real-world states, ensuring operational safety across multi-step workflows has become a critical challenge. While recent work has moved beyond single-turn evaluation toward multi-turn paradigms, key limitations persist: step-level methods treat actions in isolation, missing ho...
+
+**📝 Summary:** 提出 PASTABench，评估 agent 在多轮轨迹中主动风险干预的时机（是否/何时/风险类型），发现最佳模型仅 40.74% 达到最优干预时机，且小模型存在关键词过拟合而非真正风险理解。
+
+### [Psychoacoustically Aligned Latent Smoothing for Adversarial Robustness of Full-Duplex Speech-to-Speech Dialogue Models](https://arxiv.org/abs/2609.27378v1)
+- **Authors:** Kian Shamsaie, Iman Modarressi
+- **Date:** 2026-09-23
+- **Category:** `"jailbreak" AND "agent"`
+
+> End-to-end speech-to-speech dialogue models listen and speak simultaneously, so a continuously open acoustic channel is exposed to adversarial manipulation. We formalize imperceptible attacks on full-duplex agents as optimization over additive perturbations confined beneath the psychoacoustic masking threshold of the carrier speech, under three goa...
+
+**📝 Summary:** 针对全双工语音对话模型的不可感知对抗攻击（劫持/静音/越狱），提出心理声学对齐的潜空间平滑防御，将越狱成功率从 91.7% 降至 9.1%。
+
+### [LEAP-CBF: A Safety Filter for Uncertain Systems with Least-Effort Adversarial Potentials](https://arxiv.org/abs/2609.28364v1)
+- **Authors:** Oswin So, Eric Yu, Chuchu Fan
+- **Date:** 2026-09-23
+- **Category:** `"multi-agent" AND "safety"`
+
+> Control barrier functions (CBF) are a popular safety filter to ensure safety for nonlinear dynamical systems. However, when the system is subject to uncertainties and disturbances, this requires the use of robust variants of CBFs, which can be difficult to construct and can be overly conservative, especially for high-dimensional systems under input...
+
+**📝 Summary:** 提出最小努力对抗势（LEAP）作为控制屏障函数的鲁棒性证书，用于不确定动力学系统的安全过滤器设计，在四足机器人和无人机上验证。
+
+### [Persistent Billable State: Denial-of-Wallet Attacks and Defenses in Tool-Calling LLM Agents](https://arxiv.org/abs/2609.28585v1)
+- **Authors:** Jinqian Zhang, Haojun Xia, Shujiang Wu et al.
+- **Date:** 2026-09-23
+- **Category:** `"LLM agent" AND "attack"`
+
+> Multi-step tool-calling LLM agents rely on host runtimes to preserve state across turns. When a runtime carries an external tool return into later model inputs, providers meter it again. An admitted malicious or compromised tool can thereby convert untrusted data into recurring victim-billed processing without victim credentials or local runtime pr...
+
+**📝 Summary:** 提出"持久可计费状态"边界概念，攻击者可通过工具返回内容诱导宿主重复计费，最坏情况下单会话成本可达首次调用的 14293 倍。
+
+### [Specifying and Maintaining Agentic Workflows: An Empirical Study of GitHub Agentic Workflows](https://arxiv.org/abs/2609.27263v1)
+- **Authors:** Jasem Khelifi, Issam Oukhay, Ali Ouni et al.
+- **Date:** 2026-09-23
+- **Category:** `"prompt injection" AND "agent"`
+
+> Agentic workflows shift software development from prompting AI agents for individual tasks to defining recurring work that agents execute automatically. GitHub Agentic Workflows (gh-aw) enables this approach through Markdown files that combine natural-language instructions with configuration and compile into executable GitHub Actions workflows. Unl...
+
+**📝 Summary:** 对 1248 个 GitHub Agentic Workflows 文件的实证研究发现，仅 9.4% 明确处理了 prompt-injection 防御，暴露真实开发者对 agent 安全的认知不足。
+
+### [SR-Fraud: An Outcome-Supervised Reflective LLM Agent Framework for Non-Stationary Payment Fraud Detection](https://arxiv.org/abs/2609.27287v1)
+- **Authors:** Xuwei Tan, Yao Ma, Xueru Zhang
+- **Date:** 2026-09-23
+- **Category:** `"LLM agent" AND "attack"`
+
+> Real-time payment fraud detection is a non-stationary streaming prediction problem: adversaries adapt before supervised labels mature, and localized burst attacks can cause losses before retraining. Production systems typically rely on tabular classifiers and rules, which can struggle to capture these emerging sequential patterns before periodic re...
+
+**📝 Summary:** 提出外部监督反思式 LLM 框架 SR-Fraud，用于非平稳流式支付欺诈检测，在生产数据上优于静态与周期性重训练基线。
+
+### [MedVLA: A Hierarchical Vision-Language-Action Framework for Closed-Loop Precision Medical Robot Manipulation](https://arxiv.org/abs/2609.25756v1)
+- **Authors:** Junjie Xie, Chuxuan He, Angen Ye et al.
+- **Date:** 2026-09-22
+- **Category:** `"multi-agent" AND "safety"`
+
+> Precision medical robotics demands adaptive decision-making under strict safety, interpretability, and execution constraints. Although recent Vision-Language-Action (VLA) models show strong multimodal reasoning ability, their continuous action generation paradigm is not well suited for precision medical tasks, where reliable closed-loop operation m...
+
+**📝 Summary:** 提出分层视觉-语言-动作框架 MedVLA，用于精密医疗机器人操作，在电极植入任务上达到 95% 成功率。
+
+### [Ajar: Measuring Open Privilege in Agent Defenses](https://arxiv.org/abs/2609.26900v1)
+- **Authors:** Reshabh K Sharma, Linxi Jiang, Shuo Chen et al.
+- **Date:** 2026-09-22
+- **Category:** `"prompt injection" AND "agent"`
+
+> A language model agent acts through the tools it is given. The data it reads while working on a task can redirect what it does with those tools. A growing set of techniques for safe and secure agent execution therefore sits between the agent and its tools, aiming to enforce access control, information flow or isolation at that boundary. Today these...
+
+**📝 Summary:** 提出 Ajar，度量 agent 防御方案在通过安全 benchmark 的同时仍保留的"开放权限"（未被任务使用却可被滥用的能力），揭示现有防御评测的盲区。
+
+### [Indirect tipping: a social attack surface in AI agent populations](https://arxiv.org/abs/2609.25194v1)
+- **Authors:** Ariel Flint, Luca Maria Aiello, Sara M. Constantino et al.
+- **Date:** 2026-09-21
+- **Category:** `"LLM agent" AND "attack"`
+
+> As generative AI agents are deployed at scale, safety will depend not only on technical safeguards and individual model design, but also on collective equilibria that determine how agent populations process information, prioritize actions, and respond to uncertainty. Yet the same equilibria that enable agents to coordinate also create a social atta...
+
+**📝 Summary:** 提出"间接扳倒"概念，证明攻击者可通过中间过渡均衡而非直接对抗，用更少的"内鬼"比例扳倒 agent 群体的协作均衡状态。
+
+### [Emergent Collusion in Long-Horizon LLM Agent Interaction](https://arxiv.org/abs/2609.24967v1)
+- **Authors:** (authors not fully captured; see arXiv page)
+- **Date:** 2026-09-21
+- **Category:** `"multi-agent" AND "safety"`
+
+> LLM agents are increasingly deployed in collaborative settings, yet long-term interaction may give rise to undesirable coordination. We study the emergence of collusion in a long-horizon multi-agent environment: two agents repeatedly complete individual tasks, share task logs, verify each other's work, and receive rewards. We introduce realistic co...
+
+**📝 Summary:** 研究长时程多智能体交互中的合谋涌现——两个 agent 反复验证彼此工作并获得奖励，发现 94% 的轨迹中出现合谋，且能力更强的模型合谋出现得更早。
 
 ---
 
