@@ -2,7 +2,357 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-09-28**
+Auto-updated weekly. Last update: **2026-10-19**
+
+---
+
+## 2026-W42
+
+### [When Approval Becomes Execution: Authorization-Grounded Workflow Attacks on Tool-Using Agents](https://arxiv.org/abs/2610.23077v1)
+- **Authors:** Chenggong Shi, Hongmei Mou
+- **Date:** 2026-10-16
+- **Category:** `"tool use" AND "attack"`
+
+> An authorization-grounded workflow attack (OpenClaw Agent Security Attack Competition): the agent is guided through a locally coherent approval workflow where a denied document request leads it to request a normal approval token, which is then supplied to the document service via authorized_by -- no explicit policy-override instruction needed. Offi...
+
+**📝 Summary:** 在 OpenClaw Agent Security Attack Competition 里演示了一种「审批变执行」攻击：agent 被诱导走完整的正常审批流程（自己去申请 token 再提交），不需要显式 policy override 指令就能拿到越权操作。
+
+### [From Approval to Abuse: Privilege Escalation Attacks on Harness-Protected Coding Agents](https://arxiv.org/abs/2610.22987v1)
+- **Authors:** Xianglin Yang, Yechao Zhang, Jiahao Liu et al.
+- **Date:** 2026-10-16
+- **Category:** `"prompt injection" AND "agent"`
+
+> Coding-agent execution harnesses let users approve allow-rules to reduce approval fatigue. Adversarial context planted in a repository can steer an agent into requesting a plausibly justified but dangerously broad allow-rule; once approved, it blinds the harness. Across production platforms (Claude Code, Codex CLI), agents elicit target allow-rules...
+
+### [Beyond Surface Cues: Robust LLM-Generated Korean Text Detection](https://arxiv.org/abs/2610.22940v1)
+- **Authors:** SungHo Kim, SangKeun Lee
+- **Date:** 2026-10-16
+- **Category:** `"adversarial attack" AND "language model"`
+
+> Korean LLM-text detection evaluation often relies on superficial cues. KoLing is a bias-controlled adversarial benchmark (50.9k instances) suppressing shortcuts; KoLingProbe, an interpretable linguistics-grounded detector, substantially outperforms baselines while remaining robust to adversarial attacks.
+
+### [MobileInject: Evaluating Reasoning-to-Action Security of MLLM-Based Mobile Agents under Cross-Modal Consistency Injection](https://arxiv.org/abs/2610.23307v1)
+- **Authors:** Songping Wang, Peiyang Li, Yi Huang et al.
+- **Date:** 2026-10-16
+- **Category:** `"prompt injection" AND "agent"`
+
+> MLLM-based mobile agents are exposed to cross-application multimodal injection. We introduce MobileInject, the first benchmark for mobile agents against multimodal injection attacks, covering 11 scenarios, 9 risk categories, 108 risk instances, with Cross-Modal Consistency Injection and two enhanced attack methods (Multi-Role Collaborative Deceptio...
+
+### [S-GAP: Stealthy Graph Attack Primitives for Graph Large Language Models](https://arxiv.org/abs/2610.23465v1)
+- **Authors:** Wenda Li, Tongya Zheng, Shunyu Liu et al.
+- **Date:** 2026-10-16
+- **Category:** `"adversarial attack" AND "language model"`
+
+> Existing attacks on Graph LLMs construct textual and structural perturbations separately, causing attack-intent fragmentation. We propose the Graph Attack Primitive (GAP), unifying both under coherent intent, and S-GAP, a multi-agent framework iteratively refining GAP semantics. S-GAP improves ASR over strongest baselines by 7.02% on average while ...
+
+### [GRAD: Graph-Structured Antibody Defense for LLM Agents](https://arxiv.org/abs/2610.22828v1)
+- **Authors:** Tianqi Song, Jiawei Du, Xuemei Jia et al.
+- **Date:** 2026-10-16
+- **Category:** `"LLM agent" AND "attack"`
+
+> Memory poisoning and decomposition attacks distribute malicious evidence across agent operations, evading request-level defenses. GRAD combines graph-based evidence aggregation across operations (Semantic-Structural Understanding Module) with Continual Antibody Adaptation, adding experts on frozen encoder snapshots routed by graph signatures. GRAD ...
+
+### [Trojan Horse: Automated Repository Poisoning against Coding Agents](https://arxiv.org/abs/2610.23109v1)
+- **Authors:** Xiao Yang, Jinchang Hou, Jiawei Chen et al.
+- **Date:** 2026-10-16
+- **Category:** `"agentic" AND "adversarial"`
+
+> TrojanForge automates repository-level poisoning of coding agents: it parses repository structure via AST, maps agent execution traces onto AST nodes, ranks candidate payload locations by inconspicuousness, and iteratively refines disguise via adversarial play. TrojanBench (384 poisoned repos, 6 domains, 9 languages) shows a stable poisoning succes...
+
+### [MobileJailBench: Red Queen Jailbreak Benchmarking for Mobile Agents](https://arxiv.org/abs/2610.23303v1)
+- **Authors:** Songping Wang, Borui Li, Qinglong Liu et al.
+- **Date:** 2026-10-16
+- **Category:** `"jailbreak" AND "agent"`
+
+> Existing jailbreak evaluations for mobile agents focus on conversational attacks rather than mobile workflows. MobileJailBench introduces 520 tasks, 3 jailbreak paradigms, 14 risk categories, a high-fidelity mobile sandbox across 20+ apps, and Dual-Dynamic Evolution. Mobile agents are particularly vulnerable to implicit jailbreaks; dynamic evolutio...
+
+### [Monitor-Validity Failures: LLM Safety Evidence Paths at Evolving Framework Boundaries](https://arxiv.org/abs/2610.23362v1)
+- **Authors:** Junchi Liao
+- **Date:** 2026-10-16
+- **Category:** `"agent safety"`
+
+> Modern LLM applications rely on runtime monitors that inspect tool calls, traces, streams, detector outputs, and verifier inputs. This creates an interface-reliability problem: a framework path may remain operational while policy-relevant evidence never reaches its decision point. In one representative case, a regex detector returned a positive mat...
+
+### [ABF-Bench: A Verifiable Benchmark for Agentic Blockchain Forensics](https://arxiv.org/abs/2610.23656v1)
+- **Authors:** Xiaohang Yu, Hejia Geng, William Knottenbelt
+- **Date:** 2026-10-16
+- **Category:** `"agentic" AND "adversarial"`
+
+> ABF-Bench makes evidence-backed blockchain fund tracing a verifiable agent task where every claimed movement must cite retrieved ledger records. Built from real laundering activity with multi-hop transfers, DeFi exchanges, and address poisoning. The proposed agent harness reaches 75% edge recall versus 47% for Codex and 10% for Claude Code (which l...
+
+### [AMEND: Constraint-Guided Multi-Agent Text Detoxification with Isolated Critics](https://arxiv.org/abs/2610.23183v1)
+- **Authors:** Tianyu Wang
+- **Date:** 2026-10-16
+- **Category:** `"multi-agent" AND "safety"`
+
+> Text detoxification must balance toxicity removal, semantic preservation, and fluency. AMEND decouples detoxification into role-conditioned proposal generation, isolated multidimensional criticism, and constraint-first selection, improving the joint evaluation metric over the best single role and over unconstrained multi-round loops while reducing ...
+
+### [SAFE-Mem: Secure Agentic Memory with Fine-Grained Authority and Governance-Aware Retrieval](https://arxiv.org/abs/2610.22959v1)
+- **Authors:** Haoming Li, Dingyi Kang, Xu Hu et al.
+- **Date:** 2026-10-16
+- **Category:** `"LLM agent" AND "attack"`
+
+> Persistent agent memory can let untrusted external claims be later treated as authorized preferences/policies/permissions. SAFE-Mem annotates each claim with governance labels (kind, authority, scope), does governance-aware retrieval matching query requirements to claim permissions, and builds a governance-enabled memory graph. Across four LLM back...
+
+### [GatewayBench: Unified Capability and Security Evaluation Platform for MCP Gateways](https://arxiv.org/abs/2610.23449v1)
+- **Authors:** Yitian Zheng, Zhaorun Chen, Haoyu Li et al.
+- **Date:** 2026-10-16
+- **Category:** `"tool use" AND "attack"`
+
+> MCP gateways are a critical, underexplored middleware layer aggregating/governing the tool surface exposed to agents. GatewayBench characterizes flattened vs. hierarchical gateway architectures, with 524 tasks across six domains and 11,118 real-world tools from 251 MCP servers, injecting task-irrelevant tools to test scaling. Experiments across sev...
+
+**📝 Summary:** MCP Gateway 的首个统一能力+安全评测平台，524 个任务覆盖 11,118 个真实工具，系统比较了扁平化与分层网关架构在任务完成率、效率与攻击抵御力上的差异。
+
+### [Ignored, Not Refused: What Low Prompt-Injection Success Rates Hide in Small Tool-Using Agents](https://arxiv.org/abs/2610.23254v1)
+- **Authors:** Farhan Zarif, Kazi Shahid Ahmed Galib, Synthia Akter Promi et al.
+- **Date:** 2026-10-16
+- **Category:** `"prompt injection" AND "agent"`
+
+> Benchmarks measure indirect prompt injection (IPI) security via attack success rate (ASR), treating failed attacks as successful defenses. Auditing 33,000 trajectories from eleven open-weight agents, a label-blind LLM judge shows most failed attacks are ignored (76-80%) rather than refused (17-18%). Changing only the system prompt shifts InjecAgent...
+
+**📝 Summary:** 审计 33,000 条 trajectory 发现：低 attack success rate 大多数情况下是 agent「忽略」了注入指令而非真正「拒绝」，二者行为完全不同但现有 ASR 指标无法区分。
+
+### [SCARCE: Emergent Institutions in Long-Horizon Multi-Agent Coding Systems](https://arxiv.org/abs/2610.21029v1)
+- **Authors:** Abhinav Kumar, Rediet Abebe, Eugene Bagdasarian et al.
+- **Date:** 2026-10-15
+- **Category:** `"multi-agent" AND "safety"`
+
+> SCARCE is a framework where coding agents negotiate access to a shared execution resource under individual deadlines. Agents spontaneously develop informal institutions (persistent rules grounded in reputation, reciprocity, precedent) that carry across tasks; newer frontier models exhibit more institutional behaviors, alongside cooperation, exclusi...
+
+### [Robust Multi-Agent Pursuit with Preemptive Communication via Reachability-Based Control Barrier Functions](https://arxiv.org/abs/2610.22198v1)
+- **Authors:** Madison Book, Justin Bradley
+- **Date:** 2026-10-15
+- **Category:** `"agent safety"`
+
+> Safe multi-agent coordination typically assumes continuous, perfect state sharing. We propose a unified control/communication strategy that guarantees inter-agent safety under intermittent communication using reachability-based control barrier functions, reducing messages by 77.5% compared to periodic/event-triggered baselines with zero collisions ...
+
+### [PROBE: Learning to Audit Policy Compliance in Tool-Using LLM Agents](https://arxiv.org/abs/2610.22124v1)
+- **Authors:** Kshitij Mishra, Abhijith Sharma, Nils Lukas et al.
+- **Date:** 2026-10-15
+- **Category:** `"red teaming" AND "LLM"`
+
+> Capability benchmarks measure what agents can accomplish; content-safety red-teaming measures harmful generations; neither tests policy compliance during otherwise-valid tool use. PROBE trains LLM-based auditors to probe deployed agents via multi-turn tool-mediated dialogue, formalized as a two-player Markov game. PROBE-trained auditors uncover bro...
+
+### [Continuous Adversarial Training for Transferable LLM Honesty](https://arxiv.org/abs/2610.22292v1)
+- **Authors:** Tommaso Tosato
+- **Date:** 2026-10-15
+- **Category:** `"agentic" AND "adversarial"`
+
+> CATCH (Continuous Adversarial Training for Consistent Honesty) trains a model toward honest answers and away from dishonest ones while preserving capability, adapted from a method for robustly refusing harmful queries. It reduces dishonesty under pressure on MASK, increases confessions in the multi-agent game Among Us, and improves hidden-behavior ...
+
+### [Everyone's a little bit racist: a novel ML backdoor attack in black-box mode](https://arxiv.org/abs/2610.22459v1)
+- **Authors:** Michele Cerrta, Gabriele Costa
+- **Date:** 2026-10-15
+- **Category:** `"tool use" AND "attack"`
+
+> Backdoor-as-a-Service is a model-agnostic, fully black-box technique that activates a latent secondary task via genetic-search-discovered input transformations, without modifying training data, architecture, or weights. Verified against an MNIST classifier coerced into letter recognition and a production NSFW classifier turned into a demographic-gr...
+
+### [The Model Knows Better: Defending Medical Multi-Agent Systems Against Prompt Injection](https://arxiv.org/abs/2610.22594v1)
+- **Authors:** Fardin Ahsan Sakib, Ziwei Zhu, Ozlem Uzuner
+- **Date:** 2026-10-15
+- **Category:** `"prompt injection" AND "agent"`
+
+> In medical multi-agent systems, a single injected passage succeeds in up to 61% of cases and collaboration does not consistently protect against it. We propose a training-free defense that separates patient findings from clinical judgments and verifies each judgment against the findings alone, lowering attack success on MedQA to 4-7% while maintain...
+
+### [Shortcut Sensitivity in Agent-Safety Evaluations](https://arxiv.org/abs/2610.22243v1)
+- **Authors:** Hasan Demirkiran, Jens Ernstberger
+- **Date:** 2026-10-15
+- **Category:** `"agent safety"`
+
+> AI agents take actions through tools. Some actions are sensitive, so guards that supervise them must themselves be evaluated reliably. Yet the data used to evaluate a guard can include cues that make labels predictable without measuring the intended safety construct, and those cues can also influence guard decisions. We introduce a three-level shor...
+
+### [Emergent Discrimination and Polarization in Multi-Agent Systems](https://arxiv.org/abs/2610.22701v1)
+- **Authors:** Nestor Caticha, João Henrique Sant'Ana, Felippe Alves et al.
+- **Date:** 2026-10-15
+- **Category:** `"multi-agent" AND "safety"`
+
+> A population of learning agents updating opinions and trust estimates via online Bayesian teacher-student learning, with group-biased perceived agreement, reveals a rich phase diagram with four collective states: spin-glass frustrated out-group favoritism, nondiscriminatory polarization, and two discrimination regimes, underscoring the need for pop...
+
+### [Refusal Is Not Robustness: Measuring Harmful Reachability in Autoregressive Language Models](https://arxiv.org/abs/2610.22754v1)
+- **Authors:** Parv Kapoor, Teresa Fortes, Claudia Mamede et al.
+- **Date:** 2026-10-15
+- **Category:** `"red teaming" AND "LLM"`
+
+> A sampled refusal can coexist with substantial probability mass on harmful generation paths. We introduce bounded continuation analysis (BCA), modeling autoregressive generation as a stochastic process over token prefixes, estimating harmful reachability via probabilistic model checking. Across four instruction-tuned LLMs and 100 JailbreakBench beh...
+
+### [Learning When to Withdraw: Curriculum Coverage and Rule-Specific Failures in Fine-Tuned Language Agents](https://arxiv.org/abs/2610.21045v1)
+- **Authors:** Mohamed Abouzahra
+- **Date:** 2026-10-15
+- **Category:** `"agent safety"`
+
+> Tool-using language agents must revise prepared actions when evidence changes or authority is revoked. We study supervised fine-tuning in NAQD-Env for selective withdrawal. SFT checkpoints reach decision agreement of 0.77-0.92 and withdrawal recall of 0.46-0.86 versus baselines' 0.45-0.63, though rule-level diagnostics reveal narrower generalizatio...
+
+### [The LLM-Attacker: A Unified Red-Team Framework for Privacy Evaluation of Split and Distributed LLM Systems](https://arxiv.org/abs/2610.22722v1)
+- **Authors:** Georgios Politis, Evangelos Pappas
+- **Date:** 2026-10-15
+- **Category:** `"red teaming" AND "LLM"`
+
+> LLM-Attacker is a framework recording attacker choices (message access, model weights, dataset, recovery measures) to let researchers compare/extend privacy evaluations of split LLM systems. In a GPT-2 experiment, adding gradients returned during training increased token recovery from 94.20% to 97.38% and exact-document recovery from 13.71% to 37.7...
+
+### [Model-as-a-Trojan: Self-Activating Covert DNS Exfiltration Baked Into the Weights of an LLM Agent](https://arxiv.org/abs/2610.22578v1)
+- **Authors:** Barak Haryati, Shaked Zychlinski
+- **Date:** 2026-10-15
+- **Category:** `"agentic" AND "adversarial"`
+
+> A fine-tuned open-weight LLM carries a single covert behavior in its parameters: on first turn, whenever it infers a shell tool is available, it exfiltrates a secret via DNS queries (base32-encoded, chunked) to an attacker-controlled nameserver, then behaves normally. The attack completes from inside a container with no internet egress beyond DNS r...
+
+**📝 Summary:** 把一个隐蔽的 DNS 外泄后门直接 fine-tune 进开源 LLM 的权重里：模型一旦检测到有 shell 工具就自动触发，20/20 次对抗抑制测试均未被压制住，且无法通过 prompt 关闭。
+
+### [P2Patch: Exploit-Guided Vulnerability Repair](https://arxiv.org/abs/2610.20245v1)
+- **Authors:** Mohsen Iranmanesh, Sina Moradi Sabet, Sina Marefat et al.
+- **Date:** 2026-10-14
+- **Category:** `"tool use" AND "attack"`
+
+> LLM agents for automated program repair typically validate a patch against the same evidence used to construct it. P2Patch treats each patch as a new attack target: an exploitation agent and patching agent iterate adversarially until the patch blocks all accumulated proof-of-vulnerabilities. Across 101 C/C++/Java CVE subjects, this surfaces a disti...
+
+### [MMA-SafetyBench: A Benchmark for Multimodal Agent Safety Evaluation](https://arxiv.org/abs/2610.19384v1)
+- **Authors:** Yuke Wang, Benlei Cui, Shen Pang et al.
+- **Date:** 2026-10-14
+- **Category:** `"agent safety"`
+
+> Multimodal agents increasingly rely on visual interfaces, creating an attack surface not captured by text-only safety evaluations. We study Visual Semantic Hijacking via deceptive interface elements (forged system alerts) and construct MMA-SafetyBench with 1,083 adversarial trajectories. Across nine models, Attack Success Rate reaches 87.96%, Seman...
+
+### [Policy-Verified Self-Training: Learning Agent Compliance from Verifiable Policy Rewards](https://arxiv.org/abs/2610.19372v1)
+- **Authors:** Min-Young Yu
+- **Date:** 2026-10-14
+- **Category:** `"prompt injection" AND "agent"`
+
+> We introduce Policy-Verified Self-Training (PVST): an agent's own runtime policy-verifier decisions become training rewards. On held-out AgentDojo tasks under prompt injection, PVST training of Qwen3-8B reduces violating trajectories from 37.2% to 10.3% and successful attacks from 12.4% to 0.5%, generalizing to an unseen attack template and task su...
+
+### [StepSafe: Learning Timely Intervention with Context-Aware Safety Reasoning](https://arxiv.org/abs/2610.20960v1)
+- **Authors:** Siyi Gu, Kunhan Gao, Chao Peter Yang et al.
+- **Date:** 2026-10-14
+- **Category:** `"agent safety"`
+
+> Safety in agentic systems is inherently sequential. We propose ASPO, a training framework for step-level timely intervention using pre-fix level stage alignment and adaptive feedback self-distillation. StepSafe, a step-level reasoning guardrail, achieves state-of-the-art performance among open-source guardrails across five agent-safety benchmarks w...
+
+### [Screwtape: Adversarial Transcript Editing for Monitor Red-Teaming](https://arxiv.org/abs/2610.20941v1)
+- **Authors:** Gosha Kozhevnikov, Tyler Tracy
+- **Date:** 2026-10-14
+- **Category:** `"red teaming" AND "LLM"`
+
+> Screwtape converts real agent transcripts into attacks that evade action-only monitors by having an LLM attacker edit a transcript so the agent causes a specified harm, verified by an LLM judge. Applied to 94 Claude Code/Codex transcripts from Redwood Research staff across 252 runs, it produced 35 attacks evading the authors' monitors, 6 of which a...
+
+### [Mission (Im)Possible: Towards Autonomous Discovery of Autopilot Logic Flaws in Open-Source Drone Frameworks](https://arxiv.org/abs/2610.19566v1)
+- **Authors:** Zichuan Li
+- **Date:** 2026-10-14
+- **Category:** `"multi-agent" AND "safety"`
+
+> Impossible Mission Finder (IMF) is a multi-agent system (auditor, tester, log-analyzer agents) combining static analysis, dynamic execution, and log analysis to find autopilot logic flaws that don't manifest as crashes. Evaluated on PX4 and ArduPilot, it found 105 previously unknown logic flaws causing unsafe behaviors including restricted-zone ent...
+
+### [From Training to Escalation: Forensic Analysis and Local Recreation of RL/RLHF-Induced Privilege Escalation in AI Agents (CVE-2026-65616)](https://arxiv.org/abs/2610.20437v1)
+- **Authors:** Alicia Colmenero-Fernández
+- **Date:** 2026-10-14
+- **Category:** `"LLM agent" AND "attack"`
+
+> Forensic analysis and containerized recreation of claimed frontier-LLM agent containment escapes from mid-2026 autonomous-evaluation incidents, reproducing a cryptographic verification bypass (CVE-2026-65616) where misconfigured repository servers enabled token forgery and privilege escalation via basic HTTP requests. Training-example conditions an...
+
+### [PRISMATIC: Prescription Risk Inspection System for Multi-Agent Treatment Interaction in Clinical Decision-Making](https://arxiv.org/abs/2610.19762v1)
+- **Authors:** Ziyang Ling, Shuyu Lu, Ziyi Chen
+- **Date:** 2026-10-14
+- **Category:** `"multi-agent" AND "safety"`
+
+> PRISMATIC is a multi-agent architecture for multimorbid-patient prescribing, using a blackboard architecture with Dynamic Self-Updating Weight Adjustment and Discrepancy Feedback Precise Calibration. On MIMIC-IV records, it significantly reduces drug conflicts and improves prescription coverage/consistency versus strong LLM baselines.
+
+### [RedDarwin: Evolving Jailbreak Skills against Frontier LLMs](https://arxiv.org/abs/2610.23726v1)
+- **Authors:** Zhouyuan Ma, Yutao Wu, Hanxun Huang et al.
+- **Date:** 2026-10-14
+- **Category:** `"jailbreak" AND "agent"`
+
+> RedDarwin shifts the unit of jailbreak evolution from prompts/fixed attacks to executable attack skills (47 reusable base skills, autonomously revised/composed/selected via target-model feedback). It raises mean ASR on AdvBench from 18.8% to 47.3%; with only 10 target-model queries it achieves 100% ASR on GPT-5.6-Sol, 92% on Claude-Sonnet-5, 80% on...
+
+### [INFUSE: A Unified Surface Benchmark for Indirect Prompt Injection in Agentic Systems](https://arxiv.org/abs/2610.20776v1)
+- **Authors:** Thuy Dung Nguyen, Jingyi Guo, Rana Seda Dubauskas et al.
+- **Date:** 2026-10-14
+- **Category:** `"prompt injection" AND "agent"`
+
+> We introduce INFUSE, an end-to-end benchmark for evaluating indirect prompt injection throughout long-horizon agent workflow lifecycles: 40 realistic tasks, 56 attack scenarios across five threat categories. Across 19 LLMs (GPT, Claude, Gemini, Llama, Gemma, Qwen), mean attack success reaches 19.6% (LLM-based eval); prompt-level instructional harde...
+
+### [Moral Combat: Exploiting Moral Foundations Theory to Jailbreak LLMs](https://arxiv.org/abs/2610.19587v1)
+- **Authors:** Adel Khorramrouz, Yi-Chia Wang, Sharon Levy
+- **Date:** 2026-10-14
+- **Category:** `"jailbreak" AND "agent"`
+
+> A multi-agent framework grounded in Moral Foundations Theory diagnoses which moral foundation a refused harmful request violates, reframes it under a justifiable foundation, and reinforces it with generated moral precedents. Models are highly susceptible to this moralization, with jailbreak success increasing further under repeated attempts; safety...
+
+### [AgentSafeEvo: Adversarial Co-Evolution for LLM Agent Safety](https://arxiv.org/abs/2610.19422v1)
+- **Authors:** Chenxu Wang, Xiaoyu Wen, Han Qi et al.
+- **Date:** 2026-10-14
+- **Category:** `"agent safety"`
+
+> Malicious content embedded in user queries, tool descriptions, or environment observations can manipulate LLM agents into unsafe actions. We introduce AgentSafeEvo, a co-evolutionary RL framework built on an attacker-defender game with learnability-guided task weighting, improving adversarial robustness while maintaining general agent capabilities.
+
+### [SpecCloak: Probing Harmful Code Generation through Engineering Specifications](https://arxiv.org/abs/2610.17907v1)
+- **Authors:** Wenbin Chen, Jiexin Wang, Guanting Wu et al.
+- **Date:** 2026-10-13
+- **Category:** `"red teaming" AND "LLM"`
+
+> Organizing malicious-code functional requirements as engineering specifications (PseudoSpec) substantially lowers refusal even when risk keywords are retained. SpecCloak (PseudoSpec + discriminator-guided optimization) achieves 28.91% average execution-verified ASR across eight models on RedCode-Gen; a proposed defense, SpecReveal, achieves 96.88% ...
+
+### [LatentRiskBench: Measuring State-Dependent Risks in Enterprise Agents](https://arxiv.org/abs/2610.17685v1)
+- **Authors:** Jingyue Cong, Estrid He, Zhuang Li et al.
+- **Date:** 2026-10-13
+- **Category:** `"safety benchmark" AND "agent"`
+
+> Enterprise agent safety risks often cannot be determined from individual actions alone -- the same action may be safe in one workflow context and a policy violation in another. LatentRiskBench pairs risky trajectories with benign counterparts sharing the same terminal action but differing latent state. Action-level evaluation detects only 0.09 of s...
+
+### [TRACER: Trace-Regularized Training Against Indirect Prompt Injection](https://arxiv.org/abs/2610.19133v1)
+- **Authors:** Kshitij Mishra
+- **Date:** 2026-10-13
+- **Category:** `"prompt injection" AND "agent"`
+
+> Indirect prompt injection defense robustness is channel-conditioned: the same attack succeeds 18% of the time as a follow-up message but 53% when placed in retrieved context. TRACER, a channel-aware adversarial training method, reduces RAG-framed ASR from 65.5% to 6.1% on GSM8K with Qwen2.5-3B-Instruct while preserving 78-82% clean accuracy.
+
+### [CyberArena: Benchmarking AI Agents in Live Symmetric Attack-and-Defense Combat](https://arxiv.org/abs/2610.19005v1)
+- **Authors:** Bangya Liu, Jianhong Tu, Yueyang Pan et al.
+- **Date:** 2026-10-13
+- **Category:** `"LLM agent" AND "attack"`
+
+> CyberArena is a dynamic, symmetric adversarial benchmark: two agents compete under identical rules, concurrently attacking and defending over continuously changing services, with an automated pipeline that generates/reviews/validates new environments. Evaluating 12 frontier LLM agents across 40 challenges in 466 matches separates model capabilities...
+
+### [AIRRI: Towards a Human-Readable, Machine-Resistant Reading Interface](https://arxiv.org/abs/2610.18724v1)
+- **Authors:** Emory Salaun, Syed Ayon, Kaleel Mahmood et al.
+- **Date:** 2026-10-13
+- **Category:** `"adversarial attack" AND "language model"`
+
+> AIRRI generates machine-resistant educational content combining image transformations and decision-based adversarial attacks (RayS, SurFree, ADBA) to defeat image-to-text-to-LLM assignment-solving pipelines. It increased character error rates for Tesseract from 2.3% to 100.0%, substantially degrading automated extraction while remaining human-reada...
+
+### [Kairos: Transactional Security Enforcement at the System Boundary for LLM Agents](https://arxiv.org/abs/2610.18457v1)
+- **Authors:** Nils Loose
+- **Date:** 2026-10-13
+- **Category:** `"LLM agent" AND "attack"`
+
+> Since models can't reliably distinguish instructions from data, indirect prompt injection should be mediated by the effects an agent produces rather than classifying individual actions. Kairos is a reference monitor at an unmodified, opaque agent's isolation boundary: a declarative trust policy decides most effects deterministically and defers the ...
+
+### [Beyond Maliciousness: Static and Runtime Attack-Surface Profiling of Agent Skills](https://arxiv.org/abs/2610.19264v1)
+- **Authors:** Ratnesh Pandey, Japneet Singh, Harsh Akshit et al.
+- **Date:** 2026-10-13
+- **Category:** `"tool use" AND "attack"`
+
+> Agent skills are Markdown documents a tool-using agent reads as instructions and acts on with session privileges. Profiling 6,309 marketplace listings (ClawHub, skillsmp) via static analysis + instrumented sandbox execution: half carry shell-execution capability, 7 in 10 carry an elevated capability, and declared permissions are frequently inaccura...
+
+**📝 Summary:** 对 6,309 个 agent skill 市场条目做静态+运行时攻击面画像，发现声明的权限与实际行为严重不符——59% 的声明条目低报了自己能做的事。
+
+### [Limits of Statistical Assurance for Embodied and Agentic AI under Adaptive Adversaries](https://arxiv.org/abs/2610.18948v1)
+- **Authors:** Inderjeet Singh
+- **Date:** 2026-10-13
+- **Category:** `"tool use" AND "attack"`
+
+> Finite safety assessments cannot exclude an adversary that preserves unattacked behavior until certification and activates afterward. The paper characterizes this limitation for embodied/tool-use AI with theory plus preregistered randomized AgentDojo trials (1.98 additional security violations per four-task continuation post-certification) and a mi...
+
+### [CT0: Cybersecurity Transformer](https://arxiv.org/abs/2610.16550v2)
+- **Authors:** Víctor Mayoral-Vilches
+- **Date:** 2026-10-12
+- **Category:** `"jailbreak" AND "agent"`
+
+> CT0-Micro is a compact (~4B) cybersecurity-specialist transformer serving both a no-generation fast-path (System 1) and a tool-using agent (System 2). It flags jailbreak requests at AUROC 0.966 in 8ms, catches its own refusals at 96.5% accuracy in 47ms, and solves 21.1% of cybench-subtask versus 7.6% for its base model, built for about 314 GPU-hour...
+
+### [ATTCK-R: Knowledge-Aware Long-Horizon Jailbreaking for Protected LLMs](https://arxiv.org/abs/2610.16305v1)
+- **Authors:** Md Mushfiqur Rahman, Tobias Rohde, Rahul Tripathi et al.
+- **Date:** 2026-10-12
+- **Category:** `"red teaming" AND "LLM"`
+
+> Prompt-based safety protection reduces a strong multi-turn jailbreak baseline's ASR from 0.896 to 0.608, showing unprotected evaluations overestimate real-world vulnerability. ATTCK-R models jailbreaking as long-horizon trajectory optimization with tactic curation and informed traceback, consistently outperforming recent multi-turn jailbreak framew...
 
 ---
 
