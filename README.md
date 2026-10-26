@@ -2,7 +2,317 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-10-19**
+Auto-updated weekly. Last update: **2026-10-26**
+
+---
+
+## 2026-W43
+
+### [Beyond What to Say: Proactive Utterance Timing with Inner Thoughts for Werewolf Agents](https://arxiv.org/abs/2610.32107v1)
+- **Authors:** Yoshiki Tanaka, Shuya Uchiyama, Daichi Hamaguchi et al.
+- **Date:** 2026-10-23
+- **Category:** `"agentic" AND "adversarial"`
+
+> Participating in a conversation involves not only deciding what to say but also whether to speak at all. This judgment carries even greater significance in environments like the Werewolf game, where participants' interests conflict, because both utterances and silence are subject to interpretation and assessment by others. Therefore, determining wh...
+
+**📝 Summary:** 研究狼人杀 agent 如何结合"内心想法"判断何时主动发言而非仅决定说什么。
+
+### [On Task, Off Track: Benchmarking LLM and Agent Robustness to Near-Target Prompt Injection](https://arxiv.org/abs/2610.32531v1)
+- **Authors:** Yuyang Gong, Zihao Wang, Jiawei Liu et al.
+- **Date:** 2026-10-23
+- **Category:** `"prompt injection" AND "agent"`
+
+> Prompt injection benchmarks assess whether large language models (LLMs) and agents resist malicious instructions embedded in external content. However, a system could perform well by rejecting attacks that obviously abandon the user's request, while still accepting changes that retain most of a legitimate answer but make it incorrect or harmful. Te...
+
+**📝 Summary:** 提出针对"近似目标"提示注入的鲁棒性评测，关注那些保留大部分合法答案但引入错误/危害的隐蔽攻击。
+
+### [AgentTrace: Execution-Level Fingerprinting of Black-Box LLM Agents](https://arxiv.org/abs/2610.32092v1)
+- **Authors:** Gejian Zhao, Hanzhou Wu, Xinpeng Zhang
+- **Date:** 2026-10-23
+- **Category:** `"agentic" AND "adversarial"`
+
+> Verifying the provenance of autonomous LLM agents is a critical security challenge. Existing semantic attribution is easily obfuscated by system prompts, while active watermarking conflicts with schema-constrained tool generation. We propose AgentTrace, an active framework that identifies the foundation model behind a black-box agent via observable...
+
+**📝 Summary:** 提出 AgentTrace，通过主动注入结构化探测并观察执行轨迹来指纹识别黑盒 agent 背后的基础模型。
+
+### [Do AI-for-Science Agents Preserve Model Safety?](https://arxiv.org/abs/2610.32045v1)
+- **Authors:** Michael Yew Chuan Lee, Manya Sriram, N. Benjamin Erichson
+- **Date:** 2026-10-23
+- **Category:** `"safety benchmark" AND "agent"`
+
+> AI-for-Science agents are increasingly being used for formulating scientific hypotheses, running autonomous experiments, and interpreting evidence. These agents are constructed by integrating a large language model (LLM) into a domain-specific agent harness, which in turn can improve the LLM's scientific capability and enable the model to orchestra...
+
+**📝 Summary:** 研究将 LLM 封装进科学任务 agent harness 后，是否会削弱底层模型原有的安全对齐。
+
+### [Measure Before You Train: Typed Decision Models vs. a Classical Baseline vs. a Generative LLM for Routing a Personal Multilingual Inbox](https://arxiv.org/abs/2610.32955v1)
+- **Authors:** Federico Lucca
+- **Date:** 2026-10-23
+- **Category:** `"agentic" AND "adversarial"`
+
+> Personal email agents decide, for every message, what it is, whether it is urgent, whether to draft a reply, create a task, or ignore it. Their error rate is rarely measured: the stored labels were written by the system itself. We present Foyer, a self-hosted personal inbox agent in daily use, and a measurement protocol (stratified sampling, frozen...
+
+**📝 Summary:** 提出个人多语言邮件路由 agent "Foyer"及测量协议，用分层抽样等方法度量自标注系统的真实错误率。
+
+### [Your Token Is Gone: A Token-Consumption Countermeasure for Disrupting LLM-Based Scam Systems](https://arxiv.org/abs/2610.30666v1)
+- **Authors:** Fudu Xing, Kailong Wang, Tianlong Yu
+- **Date:** 2026-10-22
+- **Category:** `"multi-agent" AND "safety"`
+
+> LLM-based scam systems increasingly combine adaptive dialogue, persistent context, external tools, and multi-agent coordination to automate personalized fraud. These capabilities also create a resource dependency: every reasoning step, model call, and coordination round incurs inference cost. We present TokenTrap, a resource-oriented defense that r...
+
+**📝 Summary:** 提出 TokenTrap，通过消耗攻击方 LLM scam 系统的 token/算力资源来干扰其运作的防御方法。
+
+### [Network topology shapes consensus and vulnerability in LLM populations](https://arxiv.org/abs/2610.31165v1)
+- **Authors:** Roberto Passaro, Ariel Flint, Romualdo Pastor-Satorras et al.
+- **Date:** 2026-10-22
+- **Category:** `"adversarial attack" AND "language model"`
+
+> As large language models (LLMs) are deployed in interacting populations, their collective behaviour depends not only on the models but also on who interacts with whom. Studies of convention formation in LLM populations have mainly tested well-mixed interactions. We place policies extracted from four LLMs on fully connected, random regular, and hete...
+
+**📝 Summary:** 研究网络拓扑结构如何影响大规模 LLM 群体的共识形成与脆弱性。
+
+### [$M^3$: A Multi-LLM System for Multi-Turn Jailbreaking as a Markov Decision Process](https://arxiv.org/abs/2610.31937v1)
+- **Authors:** Yuqing Huang, Jack Ji, Jithin Pradeep et al.
+- **Date:** 2026-10-22
+- **Category:** `"red teaming" AND "LLM"`
+
+> Modern Large Language Models (LLMs) remain vulnerable to carefully orchestrated multi-turn interactions that progressively bypass safety mechanisms. However, many existing red-teaming approaches rely on heuristics or impose strong assumptions that limit their applicability in fully black box settings. We address this gap by introducing $M^3$, an au...
+
+**📝 Summary:** 提出 M³，将多轮 jailbreak 攻击形式化为马尔可夫决策过程，用多 LLM 系统自动化黑盒红队测试。
+
+### [The Helpful Agent Problem: When Emergent Cooperation Among LLM Agents Bypasses Intended Workflows](https://arxiv.org/abs/2610.31985v1)
+- **Authors:** Moumita Choudhury, Amit Sarker, Shlomo Zilberstein
+- **Date:** 2026-10-22
+- **Category:** `"agent safety"`
+
+> LLM agents are increasingly deployed in collaborative settings where they pursue separate tasks while sharing resources and operating under review or oversight processes. Such settings create safety risks not only when agents are malicious, but also when they are simply trying to help. Prior work has largely studied adversarial or explicitly collus...
+
+**📝 Summary:** 研究良性（非恶意）LLM agent 之间的协作如何无意绕过预期工作流程和监督机制。
+
+### [Agentic AI Defense: Decode-Time Provenance Binding for MCP](https://arxiv.org/abs/2610.31974v1)
+- **Authors:** Eric Yocam, Varghese Vaidyan, Paris Kalathas et al.
+- **Date:** 2026-10-22
+- **Category:** `"prompt injection" AND "agent"`
+
+> Agentic AI systems using the Model Context Protocol (MCP) are vulnerable to indirect prompt injection through untrusted tool outputs. We demonstrate cross-modal trust laundering, in which instructions concealed in an email-signature image using least-significant-bit (LSB), discrete cosine transform (DCT), or metadata steganography bypass text scann...
+
+**📝 Summary:** 提出 MCP 场景下的"解码时溯源绑定"防御，应对隐藏在图片 steganography 中经多模态解码后注入文本工作流的跨模态信任洗白攻击。
+
+### [UniGuard: Multi-View Guardrail Learning for Cross-Interface Safety Generalization](https://arxiv.org/abs/2610.30742v1)
+- **Authors:** Viet-Thanh Pham, Thuy-Trang Vu, Junae Kim et al.
+- **Date:** 2026-10-22
+- **Category:** `"multi-agent" AND "safety"`
+
+> Guardrail models are increasingly used as safety layers for LLMs and agentic systems, but most are trained on fixed prompt or response interfaces and become unreliable when the same safety case appears as a conversation, agent trajectory, multi-agent trace, or policy-conditioned input. We propose UniGuard, a training framework that learns interface...
+
+**📝 Summary:** 提出 UniGuard，学习跨接口（对话、agent 轨迹、多 agent trace）通用的安全护栏表征，解决护栏模型跨场景泛化差的问题。
+
+### [Knowing Whom to Trust is not Enough: The Trust--Agreement Gap in Repeated Multi-Party LLM Negotiation](https://arxiv.org/abs/2610.31971v1)
+- **Authors:** Amit Sarker, Moumita Choudhury, Saaduddin Mahmud et al.
+- **Date:** 2026-10-22
+- **Category:** `"agentic" AND "adversarial"`
+
+> Large language model (LLM) agents increasingly participate in negotiations on behalf of individuals and organizations, yet they remain vulnerable to manipulation, particularly in repeated multi-party interactions. Classical multi-agent systems address this challenge through explicit trust and reputation models, whereas existing work on LLM negotiat...
+
+**📝 Summary:** 研究重复多方 LLM 谈判中"知道该信任谁"与"达成一致"之间的落差——信任模型不足以保证合作结果。
+
+### [Reliable AI-Assisted Decisions via Selective Auditing](https://arxiv.org/abs/2610.31662v1)
+- **Authors:** Isaac Gibbs, Elise L. Han, Ryan J. Tibshirani et al.
+- **Date:** 2026-10-22
+- **Category:** `"agentic" AND "adversarial"`
+
+> We consider online monitoring of an AI system that produces a sequence of decisions. At each round, the system outputs a proposed decision together with a confidence score estimating the trustworthiness of the decision. The decision and confidence score need not be produced by the same model: for example, one agent may propose a decision, while a s...
+
+**📝 Summary:** 提出在线选择性审计框架，用置信度分数决定对 AI 决策序列的哪些部分进行人工审核。
+
+### [Certified Execution Harness for Agentic AI: Safe and Least-Intrusive Petri-Net Supervisory Control Between Reasoning and Action](https://arxiv.org/abs/2610.31376v1)
+- **Authors:** Chao Gu, Quanyan Zhu
+- **Date:** 2026-10-22
+- **Category:** `"prompt injection" AND "agent"`
+
+> This paper studies the problem of safe tool execution for large language model (LLM) agents under prompt injection. Using Petri nets, we formalize the execution harness between the LLM and its tools as a supervisory control problem, in which marks represent capabilities, approvals and budgets. Since a transition fires only if the marks it needs are...
+
+**📝 Summary:** 用 Petri 网把 LLM agent 的推理-行动执行层形式化为监督控制问题，为工具调用提供能力/审批/预算维度的形式化防护。
+
+### [AgentPhishing: A Benchmark of LLM Email Agents Under Adaptive Attack](https://arxiv.org/abs/2610.31404v1)
+- **Authors:** Justin Tan, Miao Li, Ding Zhao
+- **Date:** 2026-10-22
+- **Category:** `"agent safety"`
+
+> Computer-use agents increasingly handle private information and act on users' behalf across desktop and web applications, including email. Phishing therefore poses privacy and security risks that depend not only on whether agents recognize malicious messages, but also on how they respond. Existing phishing datasets were developed primarily for conv...
+
+**📝 Summary:** 提出 AgentPhishing benchmark，评测 LLM 邮件 agent 在自适应钓鱼攻击下的识别与响应能力。
+
+### [JANUS: Agentic Cross-Language Fuzzing Harness Generation for Android Native Libraries](https://arxiv.org/abs/2610.30218v1)
+- **Authors:** Xiangyu Zhang, Yucheng Su, Lingling Fan et al.
+- **Date:** 2026-10-21
+- **Category:** `"LLM agent" AND "attack"`
+
+> Modern Android apps extensively rely on native libraries, bridging Java/Kotlin and C/C++ through the Java Native Interface (JNI). This cross-language interoperation, however, exposes the memory-safe Android Runtime to the unsafe C/C++ world, creating an attack surface that has been repeatedly exploited for full device compromise. While fuzzing is a...
+
+**📝 Summary:** 提出 JANUS，用 agent 自动生成跨语言(Java/C++) fuzzing harness 来测试 Android native 库的安全性。
+
+### [Secure Agentic AI and Multimodal Intelligence in 6G Communication Systems](https://arxiv.org/abs/2610.30436v1)
+- **Authors:** Satyam Gaba, Devanshu Motwani, Siva Sai et al.
+- **Date:** 2026-10-21
+- **Category:** `"tool use" AND "attack"`
+
+> Sixth-generation (6G) communication systems are expected to support immersive, intent-driven, and latency-critical services through tight integration of multimodal intelligence, edge computing, and autonomous network control. In this setting, agentic AI systems can reason over heterogeneous inputs, use tools and network functions, coordinate across...
+
+**📝 Summary:** 讨论 6G 通信系统中 agentic AI 与多模态智能的安全架构设计。
+
+### [MPIDetector: Detecting Multi-modal Prompt Injection via LLM-based Reasoning](https://arxiv.org/abs/2610.30202v1)
+- **Authors:** Yiheng Li, Jingyue Li
+- **Date:** 2026-10-21
+- **Category:** `"prompt injection" AND "agent"`
+
+> With the rapid integration of Multi-modal Large Language Models (MLLMs) into real-world applications, Prompt Injection (PI) has emerged as a critical security threat. Attackers can conceal malicious instructions within textual narratives or visual inputs to bypass safety alignment. Existing approaches, such as signature- and perplexity-based method...
+
+**📝 Summary:** 提出 MPIDetector，用 LLM 推理检测隐藏在文本/视觉输入中的多模态提示注入，克服传统签名/困惑度检测方法的局限。
+
+### [Prompt Injection Through Forensic Evidence: A Taxonomy and Proof of Concept of Anti-Forensic Attacks on LLM-Assisted Digital Investigations](https://arxiv.org/abs/2610.29747v1)
+- **Authors:** Frank Breitinger, Jan Gruber, Christopher Hargreaves et al.
+- **Date:** 2026-10-21
+- **Category:** `"prompt injection" AND "agent"`
+
+> Large language models (LLMs) are entering digital forensics as examination assistants and autonomous agents. Digital forensics inverts the usual setting for indirect prompt injection: the evidence under analysis is attacker-controlled by definition, and the examiner is obliged to read it closely. This makes the reasoning layer a new anti-forensic t...
+
+**📝 Summary:** 提出数字取证场景下的"反取证"提示注入攻击分类与概念验证——证据本身即攻击载体，取证 agent 被迫仔细阅读攻击者可控内容。
+
+### [KNOX: Hardware-assisted Regulatory Sandbox for Generative Models](https://arxiv.org/abs/2610.27543v1)
+- **Authors:** Vasisht Duddu, Adam Caulfield, Xi He
+- **Date:** 2026-10-20
+- **Category:** `"prompt injection" AND "agent"`
+
+> Regulations require companies to run AI models in a regulatory sandbox, an isolated environment that enables monitoring model behavior by regulators, prior to deployment. But, they do not spell out the technical mechanisms to design such a sandbox. Ideally, a regulatory sandbox should show (i) compliance (checks against regulations, and deviations ...
+
+**📝 Summary:** 提出 KNOX，一种硬件辅助的生成式模型监管沙箱，用于合规性检查与行为监控。
+
+### [Attention-based Classification for Indirect Prompt Injection](https://arxiv.org/abs/2610.28988v1)
+- **Authors:** Amelia Kawasaki, Stefan Lee
+- **Date:** 2026-10-20
+- **Category:** `"prompt injection" AND "agent"`
+
+> Indirect prompt injection (IPI) attacks, in which adversarial instructions are embedded in external data processed by a language model, pose a significant threat to the integrity of deployed LLM agents. Attention Tracker (Hung et al., 2025) is a recently proposed white-box detection method that identifies prompt injection attacks by monitoring how ...
+
+**📝 Summary:** 在 Attention Tracker 白盒检测方法基础上提出改进的基于注意力分布的间接提示注入分类方法。
+
+### [ClawMMU: Protection-Coherent Virtual Memory for Stateful LLM Agents](https://arxiv.org/abs/2610.28093v1)
+- **Authors:** Jinhao Hu, Bardia Mohammadi, Mofasshara Binte Rafique et al.
+- **Date:** 2026-10-20
+- **Category:** `"LLM agent" AND "attack"`
+
+> AI agents keep long-term memory, much of which comes from web pages and tool results. Agent harnesses, the software that runs the model, do not record who may act on this memory, so an instruction hidden in a fetched page can be treated as the user's own instruction. We propose ClawMMU, a protection layer that labels every piece of memory with its ...
+
+**📝 Summary:** 提出 ClawMMU，为 LLM agent 的长期记忆打上来源(owner/scope/origin/authority)标签，防止从网页/工具结果中混入的隐藏指令被当作用户指令执行。
+
+### [PerMIT: Securing Persistent Memory for LLM Agents via Machine-Checked Integrity Theorems and Scalable Community Trust](https://arxiv.org/abs/2610.28987v1)
+- **Authors:** Tanqiu Jiang, Min Bai, Sadat Shahriar et al.
+- **Date:** 2026-10-20
+- **Category:** `"LLM agent" AND "attack"`
+
+> Persistent memory is a largely undefended surface for injection and poisoning, and the same risk limits memory sharing among agents. We present PerMIT, a memory architecture with provable integrity guarantees under an explicit trust assumption: only user-typed inputs and values confirmed at a gate are trusted. PerMIT mediates the release and use of...
+
+**📝 Summary:** 提出 PerMIT，用可机器验证的完整性定理和社区信任扩展机制保护 LLM agent 的持久化记忆，防止注入与投毒。
+
+### [Complete Street Design informed by Multi-Agent Simulation](https://arxiv.org/abs/2610.27509v1)
+- **Authors:** Sharika J. Hegde, Amirmohammad Khakpour, Pedram Beigi et al.
+- **Date:** 2026-10-20
+- **Category:** `"multi-agent" AND "safety"`
+
+> Objectives: Complete Street design is currently guided largely by qualitative principles despite the increasing complexity of multimodal urban traffic. This paper develops a microscopic simulation framework for quantitatively evaluating alternative street designs by explicitly representing heterogeneous road users, including Autonomous Vehicles (AV...
+
+**📝 Summary:** 用微观多 agent 仿真框架定量评估包含自动驾驶/网联车/人driven车混合交通的完整街道设计方案。
+
+### [After the Attacker Leaves: Benchmarking Carryover Attacks on LLM Agents](https://arxiv.org/abs/2610.28425v1)
+- **Authors:** Zhiyue Xu, Xukai Wang, Zhiyuan Huang et al.
+- **Date:** 2026-10-20
+- **Category:** `"prompt injection" AND "agent"`
+
+> Modern LLM agents persist state across sessions via two channels: long-lived memory files silently prepended to the system prompt, and scheduled tasks waking the agent without user input. A one-time indirect prompt injection committed to either channel can re-fire across sessions long after the attacker leaves, threats we term carryover attacks. Ex...
+
+**📝 Summary:** 提出"遗留攻击"(carryover attack)概念——一次性间接提示注入写入长期记忆文件或定时任务后，可在攻击者离开后反复触发。
+
+### [The Show-Up Attack: When Subagents Win Over Their Supervisor](https://arxiv.org/abs/2610.27574v1)
+- **Authors:** Maosen Zhang, Jianshuo Dong, Yutong Zhang et al.
+- **Date:** 2026-10-20
+- **Category:** `"LLM agent" AND "attack"`
+
+> Multi-agent systems are increasingly deployed to coordinate multiple large language model (LLM) agents. However, this also creates new attack surfaces: malicious agents may have chances to exploit the coordination. In this paper, we propose and study the \textit{show-up attack}, in which a malicious subagent manipulates the supervisor into involvin...
+
+**📝 Summary:** 提出"抢风头攻击"(show-up attack)——恶意子 agent 操纵 supervisor 使自己被纳入超出分配范围的任务。
+
+### [AgenTest: Mining Business Rules to Test LLM Agents for Business Logic Bugs](https://arxiv.org/abs/2610.28116v1)
+- **Authors:** Lili Quan, Longtian Wang, Yuelin Wang et al.
+- **Date:** 2026-10-20
+- **Category:** `"LLM agent" AND "attack"`
+
+> Large language model (LLM) agents increasingly execute business operations through tools and interact directly with application data and services. Beyond completing user requests, these agents must obey domain-specific business rules that constrain when actions are permitted and what data or resources may be affected. Violating such rules can lead ...
+
+**📝 Summary:** 提出 AgenTest，通过挖掘业务规则来测试 LLM agent 是否违反特定领域业务逻辑约束。
+
+### [CAPSafe: A Benchmark for Contextual Action and Plan Safety Reasoning in Embodied Agents](https://arxiv.org/abs/2610.28381v1)
+- **Authors:** Youmna Farag, Svetlana Stoyanchev, Simon Keizer et al.
+- **Date:** 2026-10-20
+- **Category:** `"safety benchmark" AND "agent"`
+
+> Reasoning about safety is essential for embodied agents powered by large language models (LLMs). We introduce the Contextual Action and Plan Safety benchmark (CAPSafe), designed to evaluate safety reasoning at two levels: (1) an action-level dataset that tests whether a single action is safe given its environmental context, and (2) a plan-level dat...
+
+**📝 Summary:** 提出 CAPSafe benchmark，在动作级和计划级两个层次评测具身 agent 的情境安全推理能力。
+
+### [Black-Box Red-Teaming of Multi-Agent Systems via Reinforcement Learning](https://arxiv.org/abs/2610.28966v1)
+- **Authors:** Yuqi Jia, Hangsheng Zhang, Chenxi Liu et al.
+- **Date:** 2026-10-20
+- **Category:** `"red teaming" AND "LLM"`
+
+> Large language model (LLM) agents are increasingly deployed in multi-agent systems (MAS) to accomplish complex tasks. Prior black-box red-teaming attacks mainly focus on single agents, but we find that these methods are far less effective in MAS, where multiple sub-agents may not directly interact with the user. Therefore, we introduce ReMAS, the f...
+
+**📝 Summary:** 提出 ReMAS，首个基于强化学习的黑盒红队测试框架，专门针对多 agent 系统（而非单 agent）的脆弱性。
+
+### [Conformal Koopman Certificates for Nonlinear Multi-Agent Consensus on Time-Evolving Graphs](https://arxiv.org/abs/2610.28285v1)
+- **Authors:** Indrakshi Dey, Nicola Marchetti
+- **Date:** 2026-10-20
+- **Category:** `"multi-agent" AND "safety"`
+
+> Robot fleets must often agree on a shared value before they act, over wireless networks that change as the robots move. Their supervisor needs a deadline: the number of communication rounds after which the fleet has agreed with a stated probability. Today it comes from simulation plus a safety margin, with an open probability of being met. We certi...
+
+**📝 Summary:** 提出保形 Koopman 证书方法，为动态图上机器人集群的非线性一致性共识提供概率时限证明。
+
+### [ABench: Adversarily Benchmarking Large Language Models across Taxonomized Values](https://arxiv.org/abs/2610.27611v1)
+- **Authors:** Liping Yang, Yongqi Leng, Jingting Zheng et al.
+- **Date:** 2026-10-20
+- **Category:** `"adversarial attack" AND "language model"`
+
+> Ensuring the alignment of Large Language Models (LLMs) with diverse cultural values is critical for their safe global deployment. However, existing alignment benchmarks are predominantly English-centric or confined to simple discriminative tasks. Moreover, they often fail to effectively evaluate model robustness against complex, adversarial inducti...
+
+**📝 Summary:** 提出 ABench，针对多元文化价值观的分类体系，对 LLM 进行对抗性鲁棒性评测。
+
+### [You Are the Trigger: Speaker-Activated Backdoors](https://arxiv.org/abs/2610.27210v1)
+- **Authors:** Nataša Krčo, Euodia Dodd, Peter Romov et al.
+- **Date:** 2026-10-19
+- **Category:** `"tool use" AND "attack"`
+
+> Speech models are increasingly used as an interface to AI systems, from transcription tools to voice agents. Existing audio backdoors require an attacker to introduce triggers at inference time. We study a different threat model in which the attacker compromises the model during fine-tuning but has no access to the victim's inference-time inputs. W...
+
+**📝 Summary:** 提出"说话人激活后门"(SAB)，攻击者在微调阶段植入后门，推理时由特定说话人声纹而非显式 trigger 触发。
+
+### [Vulnerability Analysis for Safe Multi-Agent Reinforcement](https://arxiv.org/abs/2610.27293v1)
+- **Authors:** Taozheng Zhu, Shixiong Jiang, Fanxin Kong
+- **Date:** 2026-10-19
+- **Category:** `"multi-agent" AND "safety"`
+
+> Safe Multi-Agent Reinforcement Learning (SMARL) aims to learn cooperative control policies under prescribed safety constraints. Al- though existing SMARL methods focus on enforcing safety during policy optimization, their vulnerability remains largely unexplored. This paper investigates inference-time observation attacks against SMARL, where an adv...
+
+**📝 Summary:** 研究安全多 agent 强化学习(SMARL)在推理时观测扰动攻击下的脆弱性，填补此前对 SMARL 自身安全性研究的空白。
+
+### [AutoRedClaw: Automated Red-Teaming for Claw-Style Agents](https://arxiv.org/abs/2610.27244v1)
+- **Authors:** Hao Li, Tongyan Hu, Weidi Luo et al.
+- **Date:** 2026-10-19
+- **Category:** `"tool use" AND "attack"`
+
+> Agent systems are shifting from task-scoped tool-use agents to persistent, personalized assistants such as OpenClaw. These claw-style agents maintain configuration files (e.g., AGENTS.md), long-term memory, and reusable skills. Once poisoned, this persistent state is repeatedly reloaded into the agent's context, creating persistent threats across t...
+
+**📝 Summary:** 提出 AutoRedClaw，专门针对 OpenClaw 等"claw 式"持久化个人 agent（维护 AGENTS.md、长期记忆、可复用 skill）的自动化红队测试框架。
 
 ---
 
