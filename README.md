@@ -2,7 +2,249 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-10-26**
+Auto-updated weekly. Last update: **2026-11-02**
+
+---
+
+## 2026-W44
+
+### [When Safety Checks Become Privacy Risks: A Privacy-Preserving Paradigm for LLM Agent Safety Auditing](https://arxiv.org/abs/2610.41401v1)
+- **Authors:** Yixiang Luo, Ziheng Ma, Ke Chang et al.
+- **Date:** 2026-10-30
+- **Category:** `"agent safety"`
+
+> Large language model agents interact with online services through tool calls that may access private data or perform sensitive actions. Specialized providers can supply and maintain pre-execution safety auditing capabilities for agent operators. However, sending task descriptions, call arguments, and interaction histories to an external auditor may...
+
+### [What Standard Evaluations Hide About Detectors of Hijacked LLM Agents: Rare Attacks, Unseen Tools and Benchmark Transfer](https://arxiv.org/abs/2610.41803v1)
+- **Authors:** Mahmoud Abbasi, Juan M. Núñez V., Amin Shahraki
+- **Date:** 2026-10-30
+- **Category:** `"LLM agent" AND "attack"`
+
+> Detectors flag hijacked LLM agents from tool-call traces, but in eleven audited evaluations, attacks/anomalies make up 16-86% of test samples with no variation tested and six reporting no cross-benchmark test. Testing trained detectors on AgentDrift and AgentDojo (tool identity, behavior, call sequence, step embedding, text-based, plus a released m...
+
+### [SecPO: Principled Adversarial Training for Prompt Injection Security](https://arxiv.org/abs/2610.41998v1)
+- **Authors:** Sizhe Chen, Yibo Peng, Jaewon Chang et al.
+- **Date:** 2026-10-30
+- **Category:** `"prompt injection" AND "agent"`
+
+> Prompt injection allows instructions from untrusted data to manipulate an agent's operation. The existing best-defended LLM, Meta-SecAlign, is trained with DPO but still suffers ASRs near 100% under adaptive injections, partly because DPO anchors the model around an insecure reference model. The authors approximate an idealized injection-invariant ...
+
+### [AgentShield: Fortifying Web Applications Against AI Agents and Agentic Browsers](https://arxiv.org/abs/2610.41181v1)
+- **Authors:** Moiz Ali, Nafis Karim, Rownak Islam et al.
+- **Date:** 2026-10-30
+- **Category:** `"prompt injection" AND "agent"`
+
+> LLM-powered browser agents are transforming web automation. This paper presents a systematic empirical evaluation of modern agentic browsers against widely deployed anti-bot mechanisms, finding many existing defenses struggle to detect autonomous AI-driven agents. The authors introduce AgentShield, a behavioral fingerprinting framework targeting th...
+
+### [ANGLER: Verifier-Grounded Benchmarking with an Adaptive Attacker for Web Agents](https://arxiv.org/abs/2610.41272v1)
+- **Authors:** Yini Huang, Aiwen LU, Zhen Sun et al.
+- **Date:** 2026-10-30
+- **Category:** `"red teaming" AND "LLM" / "agentic" AND "adversarial"`
+
+> Web agents are increasingly deployed to complete tasks autonomously on real websites, where adversarially injected content can induce unauthorized actions. The authors introduce REEF, a benchmark of red-teaming executable environments with faithful state-based verification spanning 9 verifier-grounded websites across travel, commerce, productivity,...
+
+### [SEAL: Sealed Queries for Local Sanitization against Indirect Prompt Injection](https://arxiv.org/abs/2610.39758v1)
+- **Authors:** Doohyun Kim, Donghwa Kang, Mingyu Jun et al.
+- **Date:** 2026-10-29
+- **Category:** `"prompt injection" AND "agent" / "LLM agent" AND "attack"`
+
+> Indirect prompt injection threatens local LLM agents through untrusted tool outputs. SEAL learns a soft prompt and scoring readout offline to sanitize tool outputs using a frozen task model, constructing scoring queries from trusted initial context and the learned prompt so the reference stays independent of inspected tool text, with preservation r...
+
+### [PrivacyFlow: Privacy in AI Agents through Information Flow Analysis and Consequence-Aware Risk Management](https://arxiv.org/abs/2610.40714v1)
+- **Authors:** Robin Staab, Tom Wollschläger, Vahab Mirrokni et al.
+- **Date:** 2026-10-29
+- **Category:** `"LLM agent" AND "attack"`
+
+> Autonomous LLM agents executing multi-step workflows over personal data often misalign with user privacy expectations; existing benchmarks/defenses rarely operationalize Contextual Integrity (CI) for realistic multi-step task sequences in evolving environments. The authors introduce agentic PrivacyBench (5873 tasks, 986 sequences, dynamic environme...
+
+### [Accept Changes, Reject Attacks: Robust Memory Management for LLM Agents](https://arxiv.org/abs/2610.41056v1)
+- **Authors:** Runze Zhao, Dongruo Zhou, Sumit Kumar Jha et al.
+- **Date:** 2026-10-29
+- **Category:** `"LLM agent" AND "attack"`
+
+> LLM agents rely on long-term memory, so what a memory manager stores now shapes later behavior; it can fail by keeping outdated facts or by storing a planted/injected passage (memory poisoning), and these call for opposite write decisions so no fixed rule handles both. The authors formalize memory robustness as handling both without regressing on o...
+
+### [Towards Understanding Score-Seeking in LLMs](https://arxiv.org/abs/2610.41014v1)
+- **Authors:** Aghyad Deeb, Ryan Greenblatt, Alex Mallen
+- **Date:** 2026-10-29
+- **Category:** `"agentic" AND "adversarial"`
+
+> Production LLMs sometimes reward-hack, exploiting flaws in how tasks are scored rather than performing them as intended, sometimes sophisticatedly and adversarially. The authors investigate motivations driving this in GPT 5.6 Sol, GPT 5.5, and an OpenAI o3 checkpoint without safety training, observing behavior in agentic environments where the grad...
+
+### [REALM: Identifying Minimal Task Assets for LLM Agents](https://arxiv.org/abs/2610.39155v1)
+- **Authors:** Zihou Ren, Byungchul Tak, Long Wang
+- **Date:** 2026-10-29
+- **Category:** `"prompt injection" AND "agent"`
+
+> LLM agents often receive access to more files, accounts, and services than a task requires; prompt injection turns this excess access into an opportunity to redirect execution toward unrelated resources. REALM (Required Execution Assets Linked to a Mission) identifies and maintains a task's required assets as Dependency Graph nodes, resolves prereq...
+
+### [CoFiBreak: A Coarse-to-Fine Diversity Reward for Effective Multi-Turn Jailbreak](https://arxiv.org/abs/2610.40926v1)
+- **Authors:** Jialin Song, Xiaodong Liu, Weiwei Yang et al.
+- **Date:** 2026-10-29
+- **Category:** `"red teaming" AND "LLM"`
+
+> Automated red teaming trains an attacker LLM to elicit harmful responses, but RL with only attack success as reward can collapse attackers onto near-duplicate prompts, biasing safety evaluation. CoFiBreak is a coarse-to-fine diversity reward for GRPO: a coarse reward broadens which strategies the attacker uses, a fine reward broadens how strategies...
+
+### [Appreciation Teaches Unauthorized Execution: Self-Evolution Degrades the Robustness of Personal Agents to Indirect Prompt Injection](https://arxiv.org/abs/2610.39122v1)
+- **Authors:** Xinyan Wang, Xiaogeng Liu, Jun Shao et al.
+- **Date:** 2026-10-29
+- **Category:** `"prompt injection" AND "agent"`
+
+> Self-evolving personal agents act for users and learn from user feedback, but if an agent obeys an instruction hidden by an untrusted third party in content, the third party gains control. The authors design a controlled two-phase methodology: in adaptation, the agent reads external content, completes the embedded task, and self-evolves from user f...
+
+### [Understanding and Mitigating Role Spoofing in LLMs](https://arxiv.org/abs/2610.40396v1)
+- **Authors:** Ezra Edelman, Benjamin Edelman, Surbhi Goel et al.
+- **Date:** 2026-10-29
+- **Category:** `"prompt injection" AND "agent"`
+
+> LLMs remain susceptible to prompt injections, including role confusion where models attribute the source of text based on its style instead of its labeled role. Malicious text in tool outputs can leverage role confusion to impersonate the user, an attack the authors call role spoofing. They study how models track who-said-what using both content an...
+
+### [Characterizing LLM Agent Behaviors in Module Shadowing Environments](https://arxiv.org/abs/2610.40716v1)
+- **Authors:** Shuai Yang, Enmeng Lu, Jinyu Fan et al.
+- **Date:** 2026-10-29
+- **Category:** `"agent safety"`
+
+> LLM agents operating in untrusted workspaces face the risk of untrusted code execution during routine tasks, yet final reports and workspace states alone cannot reliably establish whether execution occurred. We introduce an evaluation framework that codes observation, reasoning, execution, and response behaviors from agent trajectories and aligns t...
+
+### [Textual Response-Aware Guidance for Zero-Shot Adversarial Robustness of Vision-Language Models](https://arxiv.org/abs/2610.40309v1)
+- **Authors:** Yubo Cui, Xianchao Guan, Zheng Zhang
+- **Date:** 2026-10-29
+- **Category:** `"adversarial attack" AND "language model"`
+
+> Vision-language models exhibit strong zero-shot generalization but remain vulnerable to adversarial attacks. Existing adversarial fine-tuning uses pre-trained model guidance to preserve image-text alignment while improving robustness, but matching visual features lacks semantic emphasis while matching prediction distributions is limited by candidat...
+
+### [Red-Teaming Large Language Models in Low-Resource African Languages: A Case Study of Yoruba and Nigerian Pidgin](https://arxiv.org/abs/2610.39590v1)
+- **Authors:** Paula Chikaodinaka Anyanwu, Valdini Douglace Lemofouet, Blessing Ngozi Uzor et al.
+- **Date:** 2026-10-29
+- **Category:** `"red teaming" AND "LLM"`
+
+> As LLMs become more widespread in Africa, safety in low-resource languages remains largely untested since most red-teaming focuses on English. This study evaluates six SOTA LLMs using 400 explicit adversarial prompts in Yoruba and Nigerian Pidgin across four harm categories, scored by native-speaker annotators. Models rejecting up to 69% of English...
+
+### [PCM: A Proof-Carrying Message Protocol for Verifiable Multi-Agent Communication](https://arxiv.org/abs/2610.39109v1)
+- **Authors:** Bravish Ghosh, et al.
+- **Date:** 2026-10-29
+- **Category:** `"prompt injection" AND "agent"`
+
+> When one AI agent tells another that a claim is true, the receiver has only the sender's word; a prompt-injected agent can launder fabricated facts and authority through a multi-agent system. Proof-Carrying Messages (PCM) is a protocol where each claim carries evidence from an append-only Merkle log the agent cannot write, with inclusion proofs sig...
+
+### [LanG 2.0: Energy-Efficient Agentic AI for Semi-Automated Security Operations at Scale](https://arxiv.org/abs/2610.41072v1)
+- **Authors:** Anes Abdennebi, Nadjia Kara, Laaziz Lahlou et al.
+- **Date:** 2026-10-29
+- **Category:** `"prompt injection" AND "agent"`
+
+> Security operations centers need to turn terabytes of alerts, logs and flows into trusted, affordable decisions. LanG 2.0 is an agentic system that detects threats, correlates evidence and writes rules, investigating whether small local models can replace frontier models affordably and safely via structural safeguards rather than model accuracy. It...
+
+### [Where You Inject Matters: The Trust Region Effect in LLM Agents](https://arxiv.org/abs/2610.38867v1)
+- **Authors:** Chengquan Guo, Xiaodong Liu, Weiwei Yang et al.
+- **Date:** 2026-10-28
+- **Category:** `"tool use" AND "attack" / "LLM agent" AND "attack"`
+
+> Existing risk assessment of indirect prompt injection has focused on injection content, not where an injection appears. The authors build three agentic testbeds spanning tool use, coding, and daily workflow domains with diverse injection surfaces, finding that holding injection content fixed, agent susceptibility varies by placement, a phenomenon t...
+
+### [Value Probes: Learned Value Functions for Beam-Search Red Teaming](https://arxiv.org/abs/2610.38526v1)
+- **Authors:** Jonathan F. Jao, Andrew Kyle Lampinen
+- **Date:** 2026-10-28
+- **Category:** `"red teaming" AND "LLM"`
+
+> Automated red-team auditing implicitly searches a tree of conversation pathways, which the authors frame as a Markov decision process: states are conversation history, actions are candidate responses, rewards are judge scores. They propose beam search for the audit rather than relying on the auditor alone, and interpret finding states likely to lea...
+
+### [Auditable Belief Updates as a Missing Safety Layer for LLM-Powered Multi-Agent Systems](https://arxiv.org/abs/2610.38869v1)
+- **Authors:** Zhuoyun Li, Boxuan Wang, Jinwei Hu et al.
+- **Date:** 2026-10-28
+- **Category:** `"agent safety" / "multi-agent" AND "safety"`
+
+> As deployed systems become more multimodal, tool-using, and multi-agent, safety failures no longer arise only from isolated harmful outputs, but also from how agents update, store, and propagate epistemic commitments across retrieval, memory, tools, and peer communication. We define belief as an engineering abstraction for evidence-based commitment...
+
+### [Where Can We Fool the Model's Mind? Response-Guided Semantic Probing and Adaptive Routing for Transferable Attacks on Black-Box MLLMs](https://arxiv.org/abs/2610.38013v1)
+- **Authors:** Ahmed Abdelnaby, Mohamed Elmahallawy
+- **Date:** 2026-10-27
+- **Category:** `"adversarial attack" AND "language model"`
+
+> Multimodal LLMs ground language in visual evidence, yet their semantic reasoning can be exploited via transferable black-box adversarial attacks. Existing attacks allocate perturbations using surrogate-model saliency, which may not reflect how an unseen MLLM semantically interprets regions. VISTA (Vulnerability-Informed Semantic Transfer Attacks) i...
+
+### [PrivacyEvalClaw: A Tool-Augmented Deliberative Agent for Auditing Privacy Leakage in LLM Jailbreak Responses](https://arxiv.org/abs/2610.36711v1)
+- **Authors:** Krishna Kanth Nakka, Yujun Wang, Shijie Zhou et al.
+- **Date:** 2026-10-27
+- **Category:** `"jailbreak" AND "agent" / "red teaming" AND "LLM"`
+
+> Determining whether a jailbreak response actually reveals personal information can be difficult when disclosures are indirect, contextual, partial, or obfuscated, and existing guard-model/LLM-as-Judge evaluators disagree substantially on ambiguous cases. PrivacyEvalClaw is a training-free deliberative agent that treats evaluators and analysis modul...
+
+### [The Envelope Layer: An Underestimated Surface of LLM Agent Defense](https://arxiv.org/abs/2610.37415v2)
+- **Authors:** Yuelin Han
+- **Date:** 2026-10-27
+- **Category:** `"LLM agent" AND "attack"`
+
+> Prior work framed the envelope layer as the channel through which malicious content enters an agent, without examining label strength, envelope authenticity, scaffolds, or memory effects. Using the A2A-TIBA attack as test vehicle and semantic breach rate as the primary indicator, this paper characterizes the envelope layer's security boundary via a...
+
+### [What Victims Take Away: Attack Reuse and Defense Revision after Prompt-Injection Attacks](https://arxiv.org/abs/2610.36422v1)
+- **Authors:** Zihan Chen, Lei Nico Zheng, Di Zhu
+- **Date:** 2026-10-27
+- **Category:** `"red teaming" AND "LLM"`
+
+> Attack logs and red-team reports show targets the attacks used against them, to help repair defenses; because prompt injections against LLMs are plain text, such records also hand targets a working copy. Using 563,349 attack records from Tensor Trust, an online game where players defended LLM-guarded accounts and could read every attack they receiv...
+
+### [Heads of Security: Learned Attention Gates Improve Prompt Injection Robustness](https://arxiv.org/abs/2610.37657v2)
+- **Authors:** Igor Shilov, Xiaoxue Yang, Alexander Panfilov et al.
+- **Date:** 2026-10-27
+- **Category:** `"tool use" AND "attack"`
+
+> Heads of Security (HoS) is a prompt injection defense enforcing instruction-data separation via a small set of learned per-head attention gates, letting models reason over untrusted content without following injected instructions. On Llama-3.3-70B-Instruct and GPT-OSS-20B, compared to SecAlign++ and ASIDE, HoS offers greater robustness to adaptive ...
+
+### [LM-DSB: A Lightweight Multi-agent System for Automated Daily Safety Bulletin Generation in Construction](https://arxiv.org/abs/2610.36433v1)
+- **Authors:** Xianxiang Zhao, Advik Mehta, Falak Sethi et al.
+- **Date:** 2026-10-27
+- **Category:** `"multi-agent" AND "safety"`
+
+> Construction safety management struggles to produce daily safety bulletins efficiently; manual creation takes 2-3 hours and yields inconsistent quality. LM-DSB integrates retrieval-augmented generation with a locally deployable LLM to automate bulletin generation on consumer-grade hardware, coordinating planner, researcher, and writer agents in a h...
+
+### [Poisoned Skills: Propagating Jailbreaks Through Agent Markdown Files](https://arxiv.org/abs/2610.37738v1)
+- **Authors:** Kashyap R Manjusha, Murali Emani
+- **Date:** 2026-10-27
+- **Category:** `"jailbreak" AND "agent"`
+
+> Modern agent frameworks allow users to provide Markdown files (e.g., SKILL.md) containing system prompts, tool descriptions, and skill definitions incorporated into the agent's context. The authors investigate whether this configuration mechanism can serve as an injection channel, building a LangChain-based QA agent whose system prompt is assembled...
+
+### [Scope-Gap Injection: Exploiting Evaluator Channel Blind Spots in the OpenClaw Agent Security Competition](https://arxiv.org/abs/2610.34777v1)
+- **Authors:** Weihang Niu, Mengxing Ren, Che Qu
+- **Date:** 2026-10-26
+- **Category:** `"agent safety"`
+
+> This paper introduces Scope-Gap Injection (SGI), an indirect prompt injection method for multi-stage LLM-agent safety pipelines. In the IJCAI 2026 OpenClaw Agent Security Attack Competition, each attack package is judged by a static skill scan (S1), an LLM-judge safety check over the task and skill definition (S2), and a live execution audit (S3). ...
+
+### [Log-To-Leak: Prompt Injection Attacks on Tool-Using LLM Agents via the Model Context Protocol](https://arxiv.org/abs/2610.36108v1)
+- **Authors:** Yuepeng Hu, Chongyu Fan, Sirat Samyoun et al.
+- **Date:** 2026-10-26
+- **Category:** `"tool use" AND "attack" / "LLM agent" AND "attack"`
+
+> LLM agents increasingly access external tools via the Model Context Protocol (MCP), but natural-language tool metadata creates a prompt-injection surface. The authors study Log-To-Leak, an additive post-hoc logging attack inducing a separate attacker-controlled call after the final legitimate call, targeting the user query, MCP server name, server ...
+
+### [V3AST-Bench: Verifiable, Valid, and Versatile Safety Evaluation for Coding Agents](https://arxiv.org/abs/2610.35188v1)
+- **Authors:** Weitao Feng, Hengheng Xiong, Zihao Zeng et al.
+- **Date:** 2026-10-26
+- **Category:** `"agent safety"`
+
+> Large language models increasingly act through code, modifying repositories, executing programs, and interacting with services in agent form. We introduce V3AST-Bench, a benchmark for Verifiable results, Valid interpretation, and Versatile risk coverage of Agent Safety, comprising 212 risk tasks spanning 18 categories, with dedicated runtime enviro...
+
+### [The Target Agent Is Its Own Best Critic but a Poor Proposer: Self-Improved Red Teaming](https://arxiv.org/abs/2610.34965v1)
+- **Authors:** (see paper)
+- **Date:** 2026-10-26
+- **Category:** `"red teaming" AND "LLM"`
+
+> Automatic red teaming increasingly relies on LLMs to iteratively diagnose failed attacks and propose improved adversarial prompts. This paper disentangles two design choices: whether criticism comes from the target session itself (self-criticism) vs a separate critic (external criticism), and whether criticism is translated into the next attack by ...
+
+### [Compatibility and future-proof testing for multi-agent systems](https://arxiv.org/abs/2610.36289v1)
+- **Authors:** Yueshan Li, Lorenzo Fiaschi, Andrea Censi et al.
+- **Date:** 2026-10-26
+- **Category:** `"multi-agent" AND "safety"`
+
+> Independently developed autonomous agents (e.g., autonomous vehicles) must guarantee joint compatibility such as safety and task-completion requirements when sharing an environment, but centralized design is unrealistic when agent designs are confidential or when future designs must be accommodated. The authors study a bi-level structure where a re...
+
+### [Verse: Semantics and Verification of Hybrid Multi-Agent Scenarios](https://arxiv.org/abs/2610.35680v1)
+- **Authors:** Yangge Li, Katherine Braught, Alex Yuan et al.
+- **Date:** 2026-10-26
+- **Category:** `"multi-agent" AND "safety"`
+
+> Verifying cyber-physical systems with many interacting agents is difficult because interactions are mediated by sensors, decisions are constrained by map structure, and mode space scales combinatorially. Verse is a framework for writing agents, maps, and sensors with a formal semantics, compiling each scenario into a hybrid automaton whose executio...
 
 ---
 
