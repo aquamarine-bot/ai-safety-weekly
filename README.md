@@ -2,7 +2,263 @@
 
 > Weekly curated papers on AI Safety, LLM red-teaming, adversarial attacks, and agent security
 
-Auto-updated weekly. Last update: **2026-11-02**
+Auto-updated weekly. Last update: **2026-11-09**
+
+---
+
+## 2026-W45
+
+### [I Think, Therefore I Attack: Evaluating Thought Injection Attacks on Reasoning Agents](https://arxiv.org/abs/2611.08811v1)
+- **Authors:** Parth Illendula, Garik Livingston, Zain Shamsi et al.
+- **Date:** 2026-11-06
+- **Category:** `prompt injection AND agent`
+
+> Large Reasoning Models (LRMs) are one of the key components of current agentic systems. LRMs augment their output with an explicit chain-of-thought reasoning stage, introducing a new attack surface for thought injection, in which untrusted text resembling the model's own deliberation is fed back to the model. We present a two-part study of this att...
+
+**📝 Summary:** 研究将伪造的'模型自身推理痕迹'注入 reasoning agent 的上下文，在真实网络攻击场景中实现最高 50% 的攻击成功率。
+
+### [GuardrailAgent: An Agentic Framework for Jailbreak Defense](https://arxiv.org/abs/2611.09734v1)
+- **Authors:** Tianze Chang, Junjie Chu, Yixin Wu et al.
+- **Date:** 2026-11-06
+- **Category:** `jailbreak AND agent`
+
+> Despite undergoing safety training to align with human values, large language models (LLMs) remain vulnerable to jailbreak attacks that circumvent built-in safeguards and elicit malicious behaviors given by the adversary. Existing defenses are mostly static and fail to adapt to new or unknown attack strategies, providing limited resilience. To addr...
+
+**📝 Summary:** 提出多智能体防御框架 GuardrailAgent，自动收集攻击特征构建知识库，实现 93.9% 的越狱检测率并能快速适应新型攻击。
+
+### [GreyZone: Production-quality Agentic Application Threats](https://arxiv.org/abs/2611.09161v1)
+- **Authors:** Ruoyu Zhou, Shuyao Jiang, Haifeng Ruan et al.
+- **Date:** 2026-11-06
+- **Category:** `agentic AND adversarial`
+
+> Agents are increasingly deployed across domains such as coding, banking, and commerce. Their ability to invoke tools and change application state makes security testing important for reliable deployment. Although agent security has been studied through various adversarial testing approaches, benchmarks grounded in production agent environments rema...
+
+**📝 Summary:** 推出 GreyZone 基准，用真实生产级开源 agent 应用评估自动化红队服务生成和投递攻击的能力，而非仅评估被攻击的 agent。
+
+### [Authorization Drift in LLM Agents: Evaluating Boundary Compliance in Multi-Step Tool Use](https://arxiv.org/abs/2611.09113v1)
+- **Authors:** Chuxue Cao, Jingru Zeng, Boqin Yin et al.
+- **Date:** 2026-11-06
+- **Category:** `agentic AND adversarial`
+
+> LLM agents can exceed their authorization boundaries while pursuing user goals without an adversary. We formalize this phenomenon as authorization drift across data, tool, scope, and time, and introduce the Authorization Drift Benchmark (ADB): 648 samples across seven domains, each pairing a sufficient compliant path with an attractive unauthorized...
+
+**📝 Summary:** 提出 Authorization Drift Benchmark（648 样本），发现 agent 在无对抗情况下也会主动越权（如过度收集数据），能力越强越容易越权。
+
+### [MemoryDojo: Benchmarking Poisoning Through LLM Agent Memory](https://arxiv.org/abs/2611.09721v1)
+- **Authors:** David H. Yang, Blake Bullwinkel, Amanda Minnich et al.
+- **Date:** 2026-11-06
+- **Category:** `LLM agent AND attack`
+
+> LLM agents benefit from using memory systems to improve performance on long-horizon, multi-session tasks. However, memory introduces a critical attack surface. Malicious instructions encountered in one session may be stored and propagated through memory before being retrieved and acted upon in later sessions. Because memory systems differ in how th...
+
+**📝 Summary:** 提出 MemoryDojo 基准，追踪恶意信息在 agent 记忆系统中的生命周期，发现五种记忆架构均易受投毒攻击。
+
+### [The Power of Meta Access in the Software of the Future](https://arxiv.org/abs/2611.08428v1)
+- **Authors:** Julian Kunkel, Ali Doosthosseini
+- **Date:** 2026-11-05
+- **Category:** `prompt injection AND agent`
+
+> Chat remains the default surface for many large language model (LLM) tasks, even as agentic tools such as OpenCode excel at coding and automation. Yet the model sees the current dialogue but not the workspace around it. We explore meta access---giving the assistant a structured, permissioned view of the interface itself and propose a ladder of leve...
+
+**📝 Summary:** 探讨给 LLM 助手提供'元访问'（结构化的界面自身状态）权限的设计，指出这种能力同时带来隐私、注入和信任边界风险。
+
+### [Debate to Deceive: Poisoning LLM's Fact-Checking via Game-Theoretic Multi-Agent Debate](https://arxiv.org/abs/2611.08756v1)
+- **Authors:** Liting Huang, Huizhi Liang, Yi Lei et al.
+- **Date:** 2026-11-05
+- **Category:** `agentic AND adversarial`
+
+> Knowledge attacks on Large Language Models, such as manipulating fact-checking judgments, pose significant risks to AI reliability. Existing approaches -- adversarial suffix/template injection and single-agent self-reflection -- lack robustness across diverse defenses and are prone to confirmation bias and costly trial-and-error, respectively. We p...
+
+**📝 Summary:** 提出 Debate-to-Deceive 框架，用博弈论驱动的多智能体辩论生成修辞性对抗段落，在事实核查任务上大幅超过现有攻击。
+
+### [The Promise of Strategic Agentic Scambaiting](https://arxiv.org/abs/2611.08170v1)
+- **Authors:** Abhishek Satyam, Hossein Siadati, Haadi Jafarian et al.
+- **Date:** 2026-11-05
+- **Category:** `agentic AND adversarial`
+
+> Scammers have increasingly adopted AI-driven capabilities, evolving from automated message generation to fully agentic conversational systems. In parallel, agentic scambaiting has emerged as a defensive approach in which autonomous agents impersonate potential victims and engage scammers in sustained interactions to extract actionable threat intell...
+
+**📝 Summary:** 提出 agent 对 agent 诱骗欺诈分子的博弈模型，发现当防御型诱骗 agent 普及率超过阈值后，诈骗者的获利会转负。
+
+### [A Gingerbread House for LLM Agents: Source-Planned Honeypots](https://arxiv.org/abs/2611.07611v1)
+- **Authors:** Seungdeok Roh, Seokjun Ryu, Sohee Park et al.
+- **Date:** 2026-11-05
+- **Category:** `LLM agent AND attack`
+
+> LLM agents can exploit web vulnerabilities fast enough that patching may come too late. We study a different arrangement: an LLM defender plans a static honeypot from the application's source, and a router sends every later request of a client it confirms as an attacker to an isolated shadow copy. On the 40 critical CVE-Bench tasks the static plan ...
+
+**📝 Summary:** 提出从应用源码规划的静态蜂蜜罐防御，将确认为攻击者的客户端流量导向隔离的影子环境，在 CVE-Bench 上将真实入侵成功率从 26/40 降至 5/40。
+
+### [RL-ATTACK: A Generalized Black-Box Adversarial Attack on Language Models via Reinforcement Learning](https://arxiv.org/abs/2611.08711v1)
+- **Authors:** Taikun Chen, Yue Zhang, Wei Qian et al.
+- **Date:** 2026-11-05
+- **Category:** `adversarial attack AND language model`
+
+> Large language models (LLMs) exhibit vulnerabilities to adversarial perturbations that can induce unintended responses. In black-box settings where gradients are inaccessible, existing methods tend to guess adversarial transformations using external knowledge, ignoring the information provided by the target model. To mitigate this, we propose a tra...
+
+**📝 Summary:** 提出基于强化学习的黑盒对抗攻击框架，直接从目标模型学习定制化扰动，在准确率和查询效率上超过现有方法。
+
+### [Stress Testing Chain-of-Thought Monitoring Against Covert Misalignment](https://arxiv.org/abs/2611.07586v1)
+- **Authors:** Yao Huang, Yifan Wang, Yitong Sun et al.
+- **Date:** 2026-11-05
+- **Category:** `red teaming AND LLM / LLM agent AND attack`
+
+> As LLM agents advance rapidly in autonomy, the risk of hidden objectives that bypass safety constraints becomes increasingly plausible. Chain-of-thought (CoT) monitoring offers a key control mechanism... we introduce TraceMRT, an automated Trace-level Monitor Red-Teaming framework that reframes the side task as a coherent sub-goal of the primary ta...
+
+**📝 Summary:** 提出 TraceMRT 框架，将隐藏目标伪装成主任务的合理子目标以逃避 CoT 监控，在 GPT-5.2、Claude-4.5 等顶级监控器上发现显著漏洞。
+
+### [Building Barricades: Red-Teaming Agentic Biosynthesis Planning](https://arxiv.org/abs/2611.08218v1)
+- **Authors:** Nicholas Roehner, Bryan Bartley, Jacob Beal et al.
+- **Date:** 2026-11-05
+- **Category:** `red teaming AND LLM`
+
+> The rapid democratization of biotechnology, enhanced by large language models (LLMs) and agentic software, is eroding longstanding barriers that have limited biosynthesis planning to experts. We present BioBulbul, an agentic system that couples LLMs with open-source biodesign tools for retrobiosynthesis, enzyme selection, gene cluster design, and D...
+
+**📝 Summary:** 构建 agentic 生物合成系统 BioBulbul 并进行红队测试，验证了 LLM+agent 工具链可被非专家用于规划已知毒素合成路径的技术可行性。
+
+### [Beyond Instruction Override: Benchmarking Indirect Prompt Injection with Task-Tampering Attacks](https://arxiv.org/abs/2611.07640v1)
+- **Authors:** Rongting Zhang, Martin Bertran, Sandeep Avula et al.
+- **Date:** 2026-11-05
+- **Category:** `prompt injection AND agent / tool use AND attack`
+
+> Indirect prompt-injection (IPI) benchmarks predominantly test planted instructions that redirect a tool-using agent toward an attacker-chosen task. Yet attacker-controlled content can instead tamper with the outcome of the task already in progress. We define IPI by authority rather than instruction-like wording... Without a defense, attacks on thre...
+
+**📝 Summary:** 提出以'权限'而非'指令措辞'定义间接注入攻击，构造任务篡改型攻击基准，发现篡改决策规则/可用动作/状态的攻击成功率高于直接篡改目标。
+
+### [Benchmarks as Software: Terminal-Bench and the Case for Continuous Benchmarks](https://arxiv.org/abs/2611.08417v1)
+- **Authors:** E. Kelly Buchanan, Crystal Zhou, Scott W. Linderman et al.
+- **Date:** 2026-11-05
+- **Category:** `red teaming AND LLM`
+
+> Coding agents are among the most economically consequential deployments of LLMs to date, making reliable evaluation increasingly important. Yet even benchmarks that are carefully validated at release can become stale. We call the resulting accumulation of defects benchmark maintenance debt. We apply this workflow to Terminal-Bench 2.0... Our audit ...
+
+**📝 Summary:** 提出'基准维护债务'概念，对 Terminal-Bench 进行持续审计后发现约 30% 的任务存在缺陷，修复后排名和准确率显著变化。
+
+### [SPILLWAY: Separating Target Admission from Sanitization to Defend Tool-Using Agents against Prompt Injection](https://arxiv.org/abs/2611.07222v1)
+- **Authors:** Woosang Lim, Yeseul Chang, Jaewoo Lee
+- **Date:** 2026-11-04
+- **Category:** `prompt injection AND agent / tool use AND attack`
+
+> Tool-using agents act on email, files, and payments, so an instruction hidden in a web page or a shared document can make an agent send data or money to an attacker. Where an action goes can instead be read from the tools' typed returns: an email's sender or a payment's account arrives in a typed field, while injected instructions arrive as free te...
+
+**📝 Summary:** 提出基于工具返回值'类型化字段 vs 自由文本'区分真实目标与注入指令的确定性防御机制，在多个后端上将攻击成功率压至接近零。
+
+### [SecureGARD: Dynamic Ontology-Guided Governance for Secure Tool-Using LLM Agents](https://arxiv.org/abs/2611.06682v1)
+- **Authors:** Guoqin Xiong, Shengtao Wen, Xiang Chen et al.
+- **Date:** 2026-11-04
+- **Category:** `prompt injection AND agent / tool use AND attack / LLM agent AND attack`
+
+> Tool-using large language model (LLM) agents translate model outputs into consequential actions, turning indirect prompt injection into an execution-security problem. We present SecureGARD, a dynamic ontology-guided governance framework... We evaluate SecureGARD on AgentDojo, ASB, and AgentDyn under benign and indirect prompt-injection settings, ac...
+
+**📝 Summary:** 提出动态本体引导的治理框架，在 AgentDojo、ASB、AgentDyn 三个基准上实现 0% 攻击成功率，同时提升任务效用。
+
+### [Securing Web Agents with the Compile-Then-Execute Paradigm](https://arxiv.org/abs/2611.06039v1)
+- **Authors:** Annabella Chow, Jinhao Zhu, Sylvie Venuto et al.
+- **Date:** 2026-11-04
+- **Category:** `prompt injection AND agent`
+
+> Web agents commonly follow the ReAct paradigm, selecting each action from runtime observations that inherently mix trusted and untrusted content. We introduce Baya, a compile-then-execute web agent... Before accessing the live website, Baya compiles the user's request into an executable Python program that calls a Trusted Website API. On WASP, a se...
+
+**📝 Summary:** 提出 Baya：先将用户请求编译为调用可信网站 API 的可执行程序，再执行，使规划模型不直接观察网页内容，在 WASP 安全基准上实现 0% 攻击成功率。
+
+### [CloakFEM: Agentic FEM Code Generation for Red-Teaming Computational Resource Exhaustion](https://arxiv.org/abs/2611.04356v1)
+- **Authors:** Li Zheng, Simin Chen
+- **Date:** 2026-11-03
+- **Category:** `red teaming AND LLM / LLM agent AND attack`
+
+> Finite element method (FEM) solvers are foundational to scientific and engineering simulation, yet their susceptibility to efficiency attacks remains largely unexplored. We introduce CloakFEM, a domain-guided LLM-agent framework for automatically generating runnable adversarial FEM programs that amplify solver computation. In the most extreme case,...
+
+**📝 Summary:** 提出 LLM-agent 驱动的红队框架，自动生成能耗尽计算资源的有效/可运行有限元程序，实现最高 5752 倍的求解器计算放大。
+
+### [Voluntary Servitude: Weaponized Safety Warning Mechanisms for Controlling AI Agents](https://arxiv.org/abs/2611.04393v1)
+- **Authors:** Ilan Zendel, Matan Levy, Stav Cohen et al.
+- **Date:** 2026-11-03
+- **Category:** `LLM agent AND attack`
+
+> LLM agents increasingly act on information retrieved from public sources they treat as credible. We show that an attacker can steer an agent through the agent's own harm-avoidance. A single fabricated hazard, written as an ordinary review, leads the agent to disqualify legitimate options and select the attacker's target by its own reasoning, with n...
+
+**📝 Summary:** 发现攻击者可通过伪造的'危险警告'（而非指令注入）诱导 agent 用自身的避害推理主动排除合法选项，隐蔽性远超传统指令注入，检测器难以识别。
+
+### [When Debate Amplifies Risk: Social-Bias Vulnerabilities in Multi-Agent Safety Deliberation](https://arxiv.org/abs/2611.04289v1)
+- **Authors:** Qinghua Mao, Xi Lin, Yuxin Qi et al.
+- **Date:** 2026-11-03
+- **Category:** `agent safety / multi-agent AND safety`
+
+> Retrieval-augmented Web applications increasingly employ multi-agent debate (MAD) to aggregate conflicting, noisy, and heterogeneous information, yet deliberation is fundamentally a social process. We introduce SafeConflict-Bias... Empirical evaluation reveals that while isolated models reliably reject unsafe guidance, standard MAD catastrophically...
+
+**📝 Summary:** 发现多智能体辩论（MAD）在社会性压力（服从多数、权威线索）下会使不安全采纳率从 0% 飙升至 100%，提出推理时去偏框架将其压制到 2% 以内。
+
+### [Inter-Agent Influence: Evaluating Persuasion, Deception, and Coercion in Multi-Agent Systems](https://arxiv.org/abs/2611.04556v1)
+- **Authors:** Chandler Smith, Qi Guo, Cecilia Elena Tilli et al.
+- **Date:** 2026-11-03
+- **Category:** `multi-agent AND safety`
+
+> The deployment of AI agents in multi-agent settings enables inter-agent influence, whereby agents can strategically steer each other's behaviour towards an intended outcome. We investigate three such capabilities - persuasion, deception, and coercion - across five realistic evaluation environments. We observed significant inter-agent influence capa...
+
+**📝 Summary:** 系统评估 agent 间说服、欺骗、胁迫能力，发现在监督场景下所有测试模型都能把监督者的拒绝决策扭转为批准，在同级场景下也能重定向同伴的安全研究方向。
+
+### [ScamWorld: An Interactive Environment for Evaluating Web Agents Against Online Fraud](https://arxiv.org/abs/2611.04879v2)
+- **Authors:** Yutao Wu, et al.
+- **Date:** 2026-11-03
+- **Category:** `prompt injection AND agent`
+
+> Web agents increasingly browse, shop, and manage accounts on behalf of their users. Beyond prompt injections and deceptive interfaces, agents operating on the open web also encounter online fraud designed to deceive humans. We introduce ScamWorld, an interactive environment that reconstructs reported scam websites... we find that baseline deception...
+
+**📝 Summary:** 构建可复现的诈骗网站交互环境 ScamWorld，发现六个前沿 LLM 驱动的 web agent 面对真实诈骗手法时欺骗率在 11%-35% 之间，且部分 agent 明知可疑仍继续执行。
+
+### [Right Tool, Wrong Parameters: Defending LLM Agents Against Parameter Poisoning](https://arxiv.org/abs/2611.04673v1)
+- **Authors:** Yao Wang, Zehua Ma, Weiming Zhang et al.
+- **Date:** 2026-11-03
+- **Category:** `LLM agent AND attack / agentic AND adversarial`
+
+> Indirect Prompt Injection (IPI) poses a critical threat to LLM agents. We study a different attack surface, parameter poisoning, where the attacker preserves the intended action but manipulates one or more tool arguments. We propose AuthorityFlow, a three-stage parameter-level defense... Without defense, the attack success rate reaches 93.06%. Auth...
+
+**📝 Summary:** 提出参数投毒攻击面（保留正确工具调用但篡改参数值），并提出 AuthorityFlow 防御，基于信息流可信度将攻击成功率从 93% 降至 9%。
+
+### [Grounded but Not Immune: Confirmation Bias in Agent-as-a-judge](https://arxiv.org/abs/2611.05662v1)
+- **Authors:** Drake Benjamin Brown, Khushbu Pahwa, Yubin Ge et al.
+- **Date:** 2026-11-03
+- **Category:** `tool use AND attack`
+
+> Evaluating open-ended agent tasks increasingly falls to an Agent-as-a-Judge: an evaluator handed tools and the agent's full trajectory so it can verify a result against the environment. We show that this grounding does not immunize the judge against confirmation bias: a single false pre-screening note, attributed to an authority and carrying no evi...
+
+**📝 Summary:** 发现即使 Agent-as-a-Judge 能自主收集证据，一条无证据效力的虚假'权威提示'仍能翻转高达 40% 的正确判决，并将失败模式分为过度信任、幻觉和调查不足三类。
+
+### [From Guidelines to Practice: Defining Requirements for AI Red-Teaming Tools](https://arxiv.org/abs/2611.04271v1)
+- **Authors:** Gia Phong Tran, Thai Duong Huynh, Randolph Loh et al.
+- **Date:** 2026-11-03
+- **Category:** `adversarial attack AND language model`
+
+> AI security testing aims to imitate adversarial attacks or malicious inputs via manual testing or with the assistance of tools. We analyze several industry standards and guidelines to identify the requirements of AI testing tools. We discuss and highlight desirable features across various AI security testing tools for a variety of AI systems. We ev...
+
+**📝 Summary:** 分析多个行业标准和指南，提出 AI 红队测试工具应满足的需求，并评估六款工具在六个 LLM 上的表现，指出现有工具与行业规范的差距。
+
+### [The Web Doesn't Sit Still: Adversarial Self-Evolving Attacks on Search Agents](https://arxiv.org/abs/2611.03754v1)
+- **Authors:** Geyuan Wang, Shunyu Liu, Siyuan Liang et al.
+- **Date:** 2026-11-02
+- **Category:** `adversarial attack AND language model`
+
+> Large Language Models (LLMs) have shown promise for empowering search agents, but since acquiring external information necessitates web search, these agents are highly susceptible to adversarial attacks. We propose an adversarial self-evolution framework that integrates bi-level optimization between the attacker's strategy evolution and the defende...
+
+**📝 Summary:** 提出攻防双层优化的对抗自演化框架（CREO），针对搜索 agent 的信息注入/上下文篡改攻击持续进化攻击策略，效果优于静态攻击基线。
+
+### [Cumulative and Audited Guardrail Tool Evolution for LLM Agent Safety (EVOLVE)](https://arxiv.org/abs/2611.02516v1)
+- **Authors:** Xiao Yang, Aishan Liu, Siyuan Liang et al.
+- **Date:** 2026-11-02
+- **Category:** `agent safety`
+
+> Large language model (LLM) agents increasingly operate in open-world environments where safety risks cannot be fully predefined. Most existing guardrail mechanisms remain static. We present EVOLVE, a tool-level self-evolving defense framework that formulates agent security as a process of cumulative security evolution... EVOLVE consistently outperf...
+
+**📝 Summary:** 提出工具级自演化防御框架 EVOLVE，将安全知识外化为可执行、可审计、持续迭代的防护工具，在多基准上平均 F1 提升 22%。
+
+### [VeriHarm-Bench: Measuring Harmful Success in LLM Coding Agents Verifiably](https://arxiv.org/abs/2611.03575v1)
+- **Authors:** Wei-Lin Chen, Zhepei Wei, Xinyu Zhu et al.
+- **Date:** 2026-11-02
+- **Category:** `jailbreak AND agent`
+
+> Large language model (LLM) coding agents increasingly operate with shell access, allowing them to write scripts, move files, alter permissions, and modify system configurations. However, an agent may achieve a user's goal while causing unintended harm... We call this harmful success. Frontier agents, including GPT-5.6-Sol and Claude-Opus-5, achieve...
+
+**📝 Summary:** 提出'有害成功'概念——agent 完成良性任务的同时造成意外伤害，发现前沿 coding agent 任务准确率达 95% 但安全完成率仅 37%。
 
 ---
 
